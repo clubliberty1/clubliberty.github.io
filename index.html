@@ -11,7 +11,6 @@
         content="Club Liberty is a student-led organization developing young leaders through civic engagement, community service, and humanitarian action.">
 
     <style>
-
         :root {
             --navy: #0B1F3A;
             --navy-light: #132E50;
@@ -35,6 +34,7 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
                 Roboto, Helvetica, Arial, sans-serif;
+
             color: var(--text);
             background: var(--white);
             line-height: 1.6;
@@ -45,10 +45,20 @@
             text-decoration: none;
         }
 
+        section {
+            padding: 95px 28px;
+            scroll-margin-top: 82px;
+        }
 
-        /* ================================
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+
+        /* ========================================
            NAVIGATION
-        ================================= */
+        ======================================== */
 
         nav {
             position: sticky;
@@ -65,7 +75,7 @@
             max-width: 1200px;
             margin: auto;
 
-            padding: 12px 28px;
+            padding: 18px 28px;
 
             display: flex;
             justify-content: space-between;
@@ -73,22 +83,25 @@
         }
 
         .logo {
+            color: var(--white);
+
+            font-size: 1.15rem;
+            font-weight: 800;
+
+            letter-spacing: 2px;
+
             display: flex;
             align-items: center;
-        }
-
-        .logo img {
-            height: 58px;
-            width: auto;
-            display: block;
         }
 
         .nav-links {
             display: flex;
             align-items: center;
+
             gap: 28px;
 
             color: rgba(255, 255, 255, 0.85);
+
             font-size: 0.9rem;
         }
 
@@ -101,9 +114,9 @@
         }
 
 
-        /* ================================
+        /* ========================================
            HERO
-        ================================= */
+        ======================================== */
 
         .hero {
             min-height: 82vh;
@@ -130,16 +143,16 @@
             overflow: hidden;
         }
 
-        /* subtle decorative stars */
-
         .hero::after {
             content: "★   ★   ★";
 
             position: absolute;
+
             right: 7%;
             bottom: 9%;
 
-            color: rgba(255, 255, 255, 0.08);
+            color: rgba(255, 255, 255, 0.07);
+
             font-size: 2rem;
             letter-spacing: 14px;
 
@@ -151,6 +164,7 @@
             width: 100%;
 
             margin: auto;
+
             padding: 100px 28px;
 
             position: relative;
@@ -161,6 +175,7 @@
             color: #D7A3A7;
 
             text-transform: uppercase;
+
             letter-spacing: 3px;
 
             font-size: 0.75rem;
@@ -171,6 +186,7 @@
 
         .hero h1 {
             font-size: clamp(3rem, 8vw, 6.5rem);
+
             line-height: 0.95;
 
             letter-spacing: -3px;
@@ -195,13 +211,15 @@
         }
 
 
-        /* ================================
+        /* ========================================
            BUTTONS
-        ================================= */
+        ======================================== */
 
         .buttons {
             display: flex;
+
             gap: 14px;
+
             flex-wrap: wrap;
         }
 
@@ -228,7 +246,8 @@
         }
 
         .button-secondary {
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.30);
+
             color: var(--white);
         }
 
@@ -237,23 +256,15 @@
         }
 
 
-        /* ================================
-           GENERAL SECTIONS
-        ================================= */
-
-        section {
-            padding: 100px 28px;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: auto;
-        }
+        /* ========================================
+           GENERAL HEADINGS
+        ======================================== */
 
         .section-label {
             color: var(--red);
 
             text-transform: uppercase;
+
             letter-spacing: 2px;
 
             font-size: 0.75rem;
@@ -266,27 +277,28 @@
             color: var(--navy);
 
             font-size: clamp(2rem, 5vw, 3.4rem);
+
             line-height: 1.05;
 
             margin-bottom: 22px;
         }
 
 
-        /* ================================
-           MICHAEL JACKSON QUOTE
-        ================================= */
+        /* ========================================
+           QUOTE
+        ======================================== */
 
         .quote-section {
             background: var(--light);
-            text-align: center;
 
-            position: relative;
+            text-align: center;
         }
 
         .quote-stars {
             color: var(--red);
 
             font-size: 0.8rem;
+
             letter-spacing: 8px;
 
             margin-bottom: 28px;
@@ -294,11 +306,13 @@
 
         .quote {
             max-width: 850px;
+
             margin: auto;
 
             color: var(--navy);
 
             font-size: clamp(1.5rem, 4vw, 2.4rem);
+
             line-height: 1.35;
 
             font-weight: 500;
@@ -313,18 +327,40 @@
         }
 
 
-        /* ================================
+        /* ========================================
            ABOUT
-        ================================= */
+        ======================================== */
 
         .about-grid {
             display: grid;
 
             grid-template-columns: 1fr 1fr;
 
-            gap: 70px;
+            gap: 80px;
 
             align-items: center;
+        }
+
+        .about-left {
+            max-width: 500px;
+        }
+
+        .about-right {
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: flex-start;
+        }
+
+        .about-logo {
+            width: 205px;
+
+            max-width: 100%;
+
+            height: auto;
+
+            margin-bottom: 28px;
         }
 
         .about-text {
@@ -334,12 +370,13 @@
         }
 
 
-        /* ================================
+        /* ========================================
            WHAT WE DO
-        ================================= */
+        ======================================== */
 
         .pillars-section {
             background: var(--navy);
+
             color: var(--white);
         }
 
@@ -381,6 +418,7 @@
             color: #D7A3A7;
 
             font-size: 0.75rem;
+
             font-weight: 800;
 
             letter-spacing: 2px;
@@ -399,9 +437,9 @@
         }
 
 
-        /* ================================
+        /* ========================================
            CHAPTERS
-        ================================= */
+        ======================================== */
 
         .chapters {
             display: grid;
@@ -433,6 +471,7 @@
             font-size: 0.75rem;
 
             text-transform: uppercase;
+
             letter-spacing: 1.5px;
 
             font-weight: 800;
@@ -453,9 +492,9 @@
         }
 
 
-        /* ================================
+        /* ========================================
            GET INVOLVED
-        ================================= */
+        ======================================== */
 
         .cta {
             background: var(--red);
@@ -466,7 +505,7 @@
         }
 
         .cta .section-label {
-            color: rgba(255, 255, 255, 0.7);
+            color: rgba(255, 255, 255, 0.70);
         }
 
         .cta h2 {
@@ -481,17 +520,21 @@
             color: rgba(255, 255, 255, 0.82);
         }
 
+        .cta .buttons {
+            justify-content: center;
+        }
 
-        /* ================================
+
+        /* ========================================
            FOOTER
-        ================================= */
+        ======================================== */
 
         footer {
             background: #071527;
 
             color: var(--white);
 
-            padding: 55px 28px 30px;
+            padding: 50px 28px 30px;
         }
 
         .footer-container {
@@ -510,13 +553,13 @@
         }
 
         .footer-brand {
-            display: flex;
-            align-items: center;
-        }
+            color: var(--white);
 
-        .footer-brand img {
-            height: 75px;
-            width: auto;
+            font-size: 1rem;
+
+            font-weight: 800;
+
+            letter-spacing: 2px;
         }
 
         .footer-links {
@@ -540,26 +583,22 @@
 
             padding-top: 20px;
 
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.10);
 
-            color: rgba(255, 255, 255, 0.4);
+            color: rgba(255, 255, 255, 0.40);
 
             font-size: 0.75rem;
         }
 
 
-        /* ================================
+        /* ========================================
            MOBILE
-        ================================= */
+        ======================================== */
 
         @media (max-width: 800px) {
 
             .nav-links {
                 display: none;
-            }
-
-            .logo img {
-                height: 48px;
             }
 
             .hero {
@@ -571,12 +610,18 @@
                 grid-template-columns: 1fr;
             }
 
+            .about-grid {
+                gap: 45px;
+            }
+
             .pillars-grid {
                 grid-template-columns: 1fr 1fr;
             }
 
             section {
                 padding: 75px 22px;
+
+                scroll-margin-top: 75px;
             }
         }
 
@@ -594,9 +639,14 @@
                 padding: 80px 22px;
             }
 
+            .about-logo {
+                width: 170px;
+            }
+
             .footer-container {
-                align-items: flex-start;
                 flex-direction: column;
+
+                align-items: flex-start;
             }
         }
 
@@ -608,20 +658,16 @@
 <body>
 
 
-    <!-- ================================
+    <!-- ========================================
          NAVIGATION
-    ================================= -->
+    ======================================== -->
 
     <nav>
 
         <div class="nav-container">
 
             <a href="#" class="logo">
-
-                <img
-                    src="club-liberty-logo.png"
-                    alt="Club Liberty">
-
+                CLUB LIBERTY
             </a>
 
 
@@ -651,13 +697,14 @@
 
 
 
-    <!-- ================================
+    <!-- ========================================
          HERO
-    ================================= -->
+    ======================================== -->
 
     <header class="hero">
 
         <div class="hero-content">
+
 
             <div class="eyebrow">
                 Student-led civic engagement
@@ -679,14 +726,15 @@
 
             <p>
 
-                Club Liberty is a student-led organization empowering
-                young people to turn civic engagement into meaningful
-                service and action.
+                Club Liberty is a student-led organization
+                empowering young people to turn civic engagement
+                into meaningful service and action.
 
             </p>
 
 
             <div class="buttons">
+
 
                 <a
                     href="#get-involved"
@@ -705,6 +753,7 @@
 
                 </a>
 
+
             </div>
 
         </div>
@@ -713,9 +762,9 @@
 
 
 
-    <!-- ================================
+    <!-- ========================================
          QUOTE
-    ================================= -->
+    ======================================== -->
 
     <section class="quote-section">
 
@@ -736,9 +785,7 @@
 
 
             <div class="quote-author">
-
                 — Michael Jackson
-
             </div>
 
 
@@ -748,23 +795,23 @@
 
 
 
-    <!-- ================================
+    <!-- ========================================
          ABOUT
-    ================================= -->
+    ======================================== -->
 
     <section id="about">
 
         <div class="container">
 
+
             <div class="about-grid">
 
 
-                <div>
+                <div class="about-left">
+
 
                     <div class="section-label">
-
                         Who We Are
-
                     </div>
 
 
@@ -775,36 +822,51 @@
 
                     </h2>
 
-                </div>
-
-
-                <div class="about-text">
-
-
-                    <p>
-
-                        Club Liberty is a student-led organization
-                        focused on developing young leaders through
-                        civic engagement, community service, and
-                        meaningful action.
-
-                    </p>
-
-
-                    <br>
-
-
-                    <p>
-
-                        Through university chapters and community
-                        initiatives, we create opportunities for
-                        students to lead, serve, and contribute to
-                        the communities around them.
-
-                    </p>
-
 
                 </div>
+
+
+
+                <div class="about-right">
+
+
+                    <img
+                        src="club-liberty-logo.png"
+                        alt="Club Liberty"
+                        class="about-logo">
+
+
+                    <div class="about-text">
+
+
+                        <p>
+
+                            Club Liberty is a student-led organization
+                            focused on developing young leaders through
+                            civic engagement, community service, and
+                            meaningful action.
+
+                        </p>
+
+
+                        <br>
+
+
+                        <p>
+
+                            Through university chapters and community
+                            initiatives, we create opportunities for
+                            students to lead, serve, and contribute to
+                            the communities around them.
+
+                        </p>
+
+
+                    </div>
+
+
+                </div>
+
 
             </div>
 
@@ -814,9 +876,9 @@
 
 
 
-    <!-- ================================
+    <!-- ========================================
          WHAT WE DO
-    ================================= -->
+    ======================================== -->
 
     <section
         id="what-we-do"
@@ -827,9 +889,7 @@
 
 
             <div class="section-label">
-
                 What We Do
-
             </div>
 
 
@@ -850,9 +910,11 @@
                         01
                     </div>
 
+
                     <h3>
                         Civic Engagement
                     </h3>
+
 
                     <p>
 
@@ -868,13 +930,16 @@
 
                 <div class="pillar">
 
+
                     <div class="pillar-number">
                         02
                     </div>
 
+
                     <h3>
                         Leadership
                     </h3>
+
 
                     <p>
 
@@ -890,18 +955,22 @@
 
                 <div class="pillar">
 
+
                     <div class="pillar-number">
                         03
                     </div>
+
 
                     <h3>
                         Community Service
                     </h3>
 
+
                     <p>
 
-                        Turning civic engagement into tangible
-                        service that strengthens communities.
+                        Turning civic engagement into
+                        tangible service that strengthens
+                        communities.
 
                     </p>
 
@@ -911,18 +980,22 @@
 
                 <div class="pillar">
 
+
                     <div class="pillar-number">
                         04
                     </div>
+
 
                     <h3>
                         Humanitarian Projects
                     </h3>
 
+
                     <p>
 
-                        Supporting communities through projects
-                        focused on essential needs and human dignity.
+                        Supporting communities through
+                        projects focused on essential needs
+                        and human dignity.
 
                     </p>
 
@@ -937,20 +1010,17 @@
 
 
 
-    <!-- ================================
+    <!-- ========================================
          CHAPTERS
-    ================================= -->
+    ======================================== -->
 
     <section id="chapters">
-
 
         <div class="container">
 
 
             <div class="section-label">
-
                 Our Chapters
-
             </div>
 
 
@@ -967,25 +1037,21 @@
 
                 <div class="chapter">
 
+
                     <div class="chapter-location">
-
                         Thousand Oaks, California
-
                     </div>
 
 
                     <h3>
-
                         California Lutheran University
-
                     </h3>
 
 
                     <p>
-
                         The founding chapter of Club Liberty.
-
                     </p>
+
 
                 </div>
 
@@ -993,17 +1059,14 @@
 
                 <div class="chapter">
 
+
                     <div class="chapter-location">
-
                         Azusa, California
-
                     </div>
 
 
                     <h3>
-
                         Azusa Pacific University
-
                     </h3>
 
 
@@ -1013,6 +1076,7 @@
                         mission across Southern California.
 
                     </p>
+
 
                 </div>
 
@@ -1025,9 +1089,9 @@
 
 
 
-    <!-- ================================
+    <!-- ========================================
          GET INVOLVED
-    ================================= -->
+    ======================================== -->
 
     <section
         id="get-involved"
@@ -1038,9 +1102,7 @@
 
 
             <div class="section-label">
-
                 Get Involved
-
             </div>
 
 
@@ -1061,8 +1123,7 @@
             </p>
 
 
-            <div class="buttons"
-                 style="justify-content: center;">
+            <div class="buttons">
 
 
                 <a
@@ -1076,15 +1137,16 @@
 
             </div>
 
+
         </div>
 
     </section>
 
 
 
-    <!-- ================================
+    <!-- ========================================
          FOOTER
-    ================================= -->
+    ======================================== -->
 
     <footer>
 
@@ -1093,11 +1155,7 @@
 
 
             <div class="footer-brand">
-
-                <img
-                    src="club-liberty-logo.png"
-                    alt="Club Liberty">
-
+                CLUB LIBERTY
             </div>
 
 
@@ -1115,28 +1173,23 @@
 
 
                 <a href="#">
-
                     TikTok
-
                 </a>
 
 
                 <a href="mailto:info@clubliberty.org">
-
                     Contact
-
                 </a>
 
 
             </div>
 
+
         </div>
 
 
         <div class="copyright">
-
             © 2026 Club Liberty. All rights reserved.
-
         </div>
 
 
