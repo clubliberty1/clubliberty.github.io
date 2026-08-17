@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Club Liberty | Developing Leaders. Serving Communities. Advancing Liberty.</title>
+
+    <meta name="description" content="Club Liberty is a student-led organization developing young leaders through civic engagement, community service, and humanitarian action.">
+
+    <style>
+        :root {
+            --navy: #0B1F3A;
+            --navy-light: #132E50;
+            --white: #FFFFFF;
+            --red: #8F2D35;
+            --light: #F5F7FA;
+            --text: #172235;
+            --muted: #64748B;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: var(--text);
+            background: var(--white);
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(11, 31, 58, 0.97);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 18px 28px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: var(--white);
+            font-size: 1.15rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            color: rgba(255,255,255,0.85);
+            font-size: 0.9rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--white);
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 82vh;
+            display: flex;
+            align-items: center;
+            background:
+                linear-gradient(rgba(11,31,58,0.94), rgba(11,31,58,0.97)),
+                var(--navy);
+            color: var(--white);
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            width: 100%;
+            margin: auto;
+            padding: 100px 28px;
+        }
+
+        .eyebrow {
+            color: #D7A3A7;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 8vw, 6.5rem);
+            line-height: 0.95;
+            letter-spacing: -3px;
+            max-width: 900px;
+            margin-bottom: 28px;
+        }
+
+        .hero h1 span {
+            color: #D7A3A7;
+        }
+
+        .hero p {
+            max-width: 650px;
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.78);
+            margin-bottom: 38px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 13px 24px;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: 0.2s ease;
+        }
+
+        .button-primary {
+            background: var(--white);
+            color: var(--navy);
+        }
+
+        .button-primary:hover {
+            transform: translateY(-2px);
+        }
+
+        .button-secondary {
+            border: 1px solid rgba(255,255,255,0.3);
+            color: var(--white);
+        }
+
+        .button-secondary:hover {
+            background: rgba(255,255,255,0.08);
+        }
+
+        /* GENERAL */
+
+        section {
+            padding: 100px 28px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .section-label {
+            color: var(--red);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            margin-bottom: 14px;
+        }
+
+        h2 {
+            color: var(--navy);
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            line-height: 1.05;
+            margin-bottom: 22px;
+        }
+
+        /* QUOTE */
+
+        .quote-section {
+            background: var(--light);
+            text-align: center;
+        }
+
+        .quote {
+            max-width: 850px;
+            margin: auto;
+            color: var(--navy);
+            font-size: clamp(1.5rem, 4vw, 2.4rem);
+            line-height: 1.35;
+            font-weight: 500;
+        }
+
+        .quote-author {
+            margin-top: 24px;
+            color: var(--muted);
+            font-weight: 700;
+        }
+
+        /* ABOUT */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .about-text {
+            color: var(--muted);
+            font-size: 1.05rem;
+        }
+
+        /* PILLARS */
+
+        .pillars-section {
+            background: var(--navy);
+            color: var(--white);
+        }
+
+        .pillars-section h2 {
+            color: var(--white);
+        }
+
+        .pillars-grid {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .pillar {
+            padding: 30px 24px;
+            border: 1px solid rgba(255,255,255,0.12);
+            background: rgba(255,255,255,0.035);
+        }
+
+        .pillar-number {
+            color: #D7A3A7;
+            font-size: 0.75rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .pillar h3 {
+            margin: 25px 0 12px;
+            font-size: 1.15rem;
+        }
+
+        .pillar p {
+            color: rgba(255,255,255,0.62);
+            font-size: 0.9rem;
+        }
+
+        /* CHAPTERS */
+
+        .chapters {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .chapter {
+            border: 1px solid #E2E8F0;
+            padding: 30px;
+            transition: 0.2s ease;
+        }
+
+        .chapter:hover {
+            border-color: var(--navy);
+            transform: translateY(-3px);
+        }
+
+        .chapter-location {
+            color: var(--red);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 800;
+        }
+
+        .chapter h3 {
+            color: var(--navy);
+            margin: 10px 0;
+            font-size: 1.25rem;
+        }
+
+        .chapter p {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        /* CTA */
+
+        .cta {
+            background: var(--red);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .cta h2 {
+            color: var(--white);
+        }
+
+        .cta p {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            color: rgba(255,255,255,0.82);
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #071527;
+            color: var(--white);
+            padding: 50px 28px 30px;
+        }
+
+        .footer-container {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .footer-brand {
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 20px;
+            color: rgba(255,255,255,0.65);
+            font-size: 0.9rem;
+        }
+
+        .copyright {
+            max-width: 1100px;
+            margin: 35px auto 0;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.4);
+            font-size: 0.75rem;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                min-height: 75vh;
+            }
+
+            .about-grid,
+            .chapters {
+                grid-template-columns: 1fr;
+            }
+
+            .pillars-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            section {
+                padding: 75px 22px;
+            }
+        }
+
+        @media (max-width: 520px) {
+
+            .pillars-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                letter-spacing: -2px;
+            }
+
+            .hero-content {
+                padding: 80px 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <nav>
+        <div class="nav-container">
+
+            <a href="#" class="logo">CLUB LIBERTY</a>
+
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#what-we-do">What We Do</a>
+                <a href="#chapters">Chapters</a>
+                <a href="#get-involved">Get Involved</a>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <!-- HERO -->
+
+    <header class="hero">
+
+        <div class="hero-content">
+
+            <div class="eyebrow">Student-led civic engagement</div>
+
+            <h1>
+                Developing leaders.<br>
+                Serving communities.<br>
+                <span>Advancing liberty.</span>
+            </h1>
+
+            <p>
+                Club Liberty is a student-led organization empowering
+                young people to turn civic engagement into meaningful
+                service and action.
+            </p>
+
+            <div class="buttons">
+
+                <a href="#get-involved" class="button button-primary">
+                    Get Involved
+                </a>
+
+                <a href="#chapters" class="button button-secondary">
+                    Our Chapters
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- QUOTE -->
+
+    <section class="quote-section">
+
+        <div class="container">
+
+            <div class="quote">
+                “If you want to make the world a better place,
+                take a look at yourself and make that change.”
+            </div>
+
+            <div class="quote-author">
+                — Michael Jackson
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section id="about">
+
+        <div class="container">
+
+            <div class="about-grid">
+
+                <div>
+
+                    <div class="section-label">
+                        Who We Are
+                    </div>
+
+                    <h2>
+                        Ideas become meaningful when they become action.
+                    </h2>
+
+                </div>
+
+                <div class="about-text">
+
+                    <p>
+                        Club Liberty is a student-led organization focused
+                        on developing young leaders through civic engagement,
+                        community service, and meaningful action.
+                    </p>
+
+                    <br>
+
+                    <p>
+                        Through university chapters and community initiatives,
+                        we create opportunities for students to lead,
+                        serve, and contribute to the communities around them.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- WHAT WE DO -->
+
+    <section id="what-we-do" class="pillars-section">
+
+        <div class="container">
+
+            <div class="section-label">
+                What We Do
+            </div>
+
+            <h2>
+                From civic engagement<br>
+                to community impact.
+            </h2>
+
+            <div class="pillars-grid">
+
+                <div class="pillar">
+
+                    <div class="pillar-number">01</div>
+
+                    <h3>Civic Engagement</h3>
+
+                    <p>
+                        Encouraging students to understand,
+                        participate in, and contribute to their communities.
+                    </p>
+
+                </div>
+
+
+                <div class="pillar">
+
+                    <div class="pillar-number">02</div>
+
+                    <h3>Leadership</h3>
+
+                    <p>
+                        Developing young leaders through responsibility,
+                        organization, service, and action.
+                    </p>
+
+                </div>
+
+
+                <div class="pillar">
+
+                    <div class="pillar-number">03</div>
+
+                    <h3>Community Service</h3>
+
+                    <p>
+                        Turning civic engagement into tangible service
+                        that strengthens communities.
+                    </p>
+
+                </div>
+
+
+                <div class="pillar">
+
+                    <div class="pillar-number">04</div>
+
+                    <h3>Humanitarian Projects</h3>
+
+                    <p>
+                        Supporting communities through projects focused
+                        on essential needs and human dignity.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CHAPTERS -->
+
+    <section id="chapters">
+
+        <div class="container">
+
+            <div class="section-label">
+                Our Chapters
+            </div>
+
+            <h2>
+                Growing through<br>
+                student leadership.
+            </h2>
+
+            <div class="chapters">
+
+                <div class="chapter">
+
+                    <div class="chapter-location">
+                        California
+                    </div>
+
+                    <h3>
+                        California Lutheran University
+                    </h3>
+
+                    <p>
+                        The founding chapter of Club Liberty.
+                    </p>
+
+                </div>
+
+
+                <div class="chapter">
+
+                    <div class="chapter-location">
+                        California
+                    </div>
+
+                    <h3>
+                        Azusa Pacific University
+                    </h3>
+
+                    <p>
+                        A growing chapter expanding Club Liberty's
+                        student-led mission.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- GET INVOLVED -->
+
+    <section id="get-involved" class="cta">
+
+        <div class="container">
+
+            <div class="section-label">
+                Get Involved
+            </div>
+
+            <h2>
+                Don't just care.<br>
+                Get involved.
+            </h2>
+
+            <p>
+                Join a chapter, start one at your university,
+                volunteer with a project, or partner with Club Liberty.
+            </p>
+
+            <div class="buttons">
+
+                <a href="mailto:info@clubliberty.org"
+                   class="button button-primary">
+                    Contact Us
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+                CLUB LIBERTY
+            </div>
+
+            <div class="footer-links">
+
+                <a href="https://www.instagram.com/club.liberty/"
+                   target="_blank">
+                    Instagram
+                </a>
+
+                <a href="#">
+                    TikTok
+                </a>
+
+                <a href="mailto:info@clubliberty.org">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 Club Liberty. All rights reserved.
+        </div>
+
+    </footer>
+
+</body>
+</html>
