@@ -18,17 +18,12 @@
             --navy: #0B1F3A;
             --navy-light: #132E50;
             --navy-dark: #071527;
-
             --white: #FFFFFF;
-
             --red: #8F2D35;
             --red-light: #D7A3A7;
-
             --light: #F5F7FA;
-
             --text: #172235;
             --muted: #64748B;
-
             --border: #E2E8F0;
         }
 
@@ -54,7 +49,6 @@
 
             background: var(--white);
             color: var(--text);
-
             line-height: 1.6;
         }
 
@@ -67,11 +61,6 @@
             max-width: 100%;
         }
 
-
-        /* ========================================
-           GENERAL LAYOUT
-        ======================================== */
-
         .container {
             max-width: 1100px;
             margin: 0 auto;
@@ -79,32 +68,23 @@
 
         section {
             padding: 95px 28px;
-            scroll-margin-top: 85px;
         }
 
         .section-label {
             color: var(--red);
-
             text-transform: uppercase;
-
             letter-spacing: 2px;
-
             font-size: 0.75rem;
             font-weight: 800;
-
             margin-bottom: 14px;
         }
 
         h2 {
             color: var(--navy);
-
             font-size: clamp(2rem, 5vw, 3.4rem);
-
             line-height: 1.05;
-
             margin-bottom: 22px;
         }
-
 
         /* ========================================
            NAVIGATION
@@ -112,41 +92,28 @@
 
         nav {
             position: sticky;
-
             top: 0;
-
             z-index: 1000;
-
             background: rgba(11, 31, 58, 0.97);
-
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
-
-            border-bottom:
-                1px solid rgba(255, 255, 255, 0.08);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         }
 
         .nav-container {
             max-width: 1200px;
-
             margin: 0 auto;
-
             padding: 18px 28px;
-
             display: flex;
-
             justify-content: space-between;
             align-items: center;
         }
 
         .brand {
             color: var(--white);
-
             font-size: 1.15rem;
             font-weight: 800;
-
             letter-spacing: 2px;
-
             transition: opacity 0.2s ease;
         }
 
@@ -156,26 +123,15 @@
 
         .nav-links {
             display: flex;
-
             align-items: center;
-
             gap: 28px;
-
             color: rgba(255, 255, 255, 0.84);
-
             font-size: 0.9rem;
-        }
-
-        .nav-links a {
-            transition:
-                color 0.2s ease,
-                opacity 0.2s ease;
         }
 
         .nav-links a:hover {
             color: var(--white);
         }
-
 
         /* ========================================
            HERO
@@ -183,14 +139,10 @@
 
         .hero {
             min-height: 82vh;
-
             display: flex;
             align-items: center;
-
             position: relative;
-
             overflow: hidden;
-
             color: var(--white);
 
             background:
@@ -209,59 +161,39 @@
 
         .hero::after {
             content: "★   ★   ★";
-
             position: absolute;
-
             right: 7%;
             bottom: 9%;
-
             color: rgba(255, 255, 255, 0.07);
-
             font-size: 2rem;
-
             letter-spacing: 14px;
-
             pointer-events: none;
         }
 
         .hero-content {
             max-width: 1200px;
-
             width: 100%;
-
             margin: 0 auto;
-
             padding: 100px 28px;
-
             position: relative;
-
             z-index: 2;
         }
 
         .eyebrow {
             color: var(--red-light);
-
             text-transform: uppercase;
-
             letter-spacing: 3px;
-
             font-size: 0.75rem;
             font-weight: 700;
-
             margin-bottom: 20px;
         }
 
         .hero h1 {
             max-width: 950px;
-
             color: var(--white);
-
             font-size: clamp(3rem, 8vw, 6.5rem);
-
             line-height: 0.95;
-
             letter-spacing: -3px;
-
             margin-bottom: 28px;
         }
 
@@ -271,14 +203,10 @@
 
         .hero-description {
             max-width: 650px;
-
             color: rgba(255, 255, 255, 0.78);
-
             font-size: 1.2rem;
-
             margin-bottom: 38px;
         }
-
 
         /* ========================================
            BUTTONS
@@ -286,22 +214,16 @@
 
         .buttons {
             display: flex;
-
             gap: 14px;
-
             flex-wrap: wrap;
         }
 
         .button {
             display: inline-block;
-
             padding: 13px 24px;
-
             border-radius: 4px;
-
             font-size: 0.9rem;
             font-weight: 700;
-
             transition:
                 transform 0.2s ease,
                 background 0.2s ease;
@@ -318,94 +240,64 @@
 
         .button-secondary {
             color: var(--white);
-
-            border:
-                1px solid rgba(255, 255, 255, 0.30);
+            border: 1px solid rgba(255, 255, 255, 0.30);
         }
 
         .button-secondary:hover {
-            background:
-                rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.08);
         }
 
-
         /* ========================================
-           LOGO + MICHAEL JACKSON QUOTE
+           QUOTE
         ======================================== */
 
         .quote-section {
             background: var(--light);
-
             text-align: center;
         }
 
         .quote-logo {
             display: block;
-
             width: 190px;
-
             height: auto;
-
-            margin:
-                0 auto 32px auto;
+            margin: 0 auto 32px auto;
         }
 
         .quote-stars {
             color: var(--red);
-
             font-size: 0.8rem;
-
             letter-spacing: 8px;
-
             margin-bottom: 25px;
         }
 
         .quote {
             max-width: 850px;
-
             margin: 0 auto;
-
             color: var(--navy);
-
-            font-size:
-                clamp(1.5rem, 4vw, 2.4rem);
-
+            font-size: clamp(1.5rem, 4vw, 2.4rem);
             font-weight: 500;
-
             line-height: 1.35;
         }
 
         .quote-author {
             margin-top: 24px;
-
             color: var(--muted);
-
             font-weight: 700;
         }
 
-
         /* ========================================
-           WHO WE ARE PREVIEW
+           ABOUT
         ======================================== */
 
         .about-grid {
             display: grid;
-
-            grid-template-columns:
-                1fr 1fr;
-
+            grid-template-columns: 1fr 1fr;
             gap: 80px;
-
             align-items: center;
-        }
-
-        .about-left {
-            max-width: 500px;
         }
 
         .about-text {
             color: var(--muted);
-
             font-size: 1.05rem;
         }
 
@@ -415,25 +307,17 @@
 
         .belief-line {
             margin-top: 30px;
-
             padding-left: 18px;
-
-            border-left:
-                3px solid var(--red);
-
+            border-left: 3px solid var(--red);
             color: var(--navy);
-
             font-size: 1.2rem;
             font-weight: 700;
         }
 
         .learn-more {
             display: inline-block;
-
             margin-top: 26px;
-
             color: var(--red);
-
             font-size: 0.92rem;
             font-weight: 700;
         }
@@ -442,29 +326,19 @@
             text-decoration: underline;
         }
 
-
         /* ========================================
            PHILOSOPHY
         ======================================== */
 
-        .philosophy-section {
-            background: var(--white);
-        }
-
         .philosophy-grid {
             display: grid;
-
-            grid-template-columns:
-                1fr 1fr;
-
+            grid-template-columns: 1fr 1fr;
             gap: 70px;
-
             align-items: start;
         }
 
         .philosophy-copy {
             color: var(--muted);
-
             font-size: 1.05rem;
         }
 
@@ -474,53 +348,33 @@
 
         .principles {
             display: grid;
-
             gap: 16px;
-
             margin-top: 34px;
         }
 
         .principle {
             padding: 22px 24px;
-
-            border:
-                1px solid var(--border);
-
+            border: 1px solid var(--border);
             background: var(--light);
-
-            transition:
-                transform 0.2s ease,
-                border-color 0.2s ease;
-        }
-
-        .principle:hover {
-            transform: translateY(-2px);
-
-            border-color: var(--navy);
         }
 
         .principle h3 {
             color: var(--navy);
-
             font-size: 1rem;
-
             margin-bottom: 6px;
         }
 
         .principle p {
             color: var(--muted);
-
             font-size: 0.92rem;
         }
 
-
         /* ========================================
-           WHAT WE DO PREVIEW
+           WHAT WE DO
         ======================================== */
 
         .what-preview {
             background: var(--navy);
-
             color: var(--white);
         }
 
@@ -534,147 +388,84 @@
 
         .pillars-grid {
             display: grid;
-
-            grid-template-columns:
-                repeat(4, 1fr);
-
+            grid-template-columns: repeat(4, 1fr);
             gap: 18px;
-
             margin-top: 50px;
         }
 
         .pillar {
             padding: 30px 24px;
-
-            background:
-                rgba(255, 255, 255, 0.035);
-
-            border:
-                1px solid rgba(255, 255, 255, 0.12);
-
-            transition:
-                transform 0.2s ease,
-                border-color 0.2s ease;
-        }
-
-        .pillar:hover {
-            transform: translateY(-4px);
-
-            border-color:
-                rgba(255, 255, 255, 0.28);
+            background: rgba(255, 255, 255, 0.035);
+            border: 1px solid rgba(255, 255, 255, 0.12);
         }
 
         .pillar-number {
             color: var(--red-light);
-
             font-size: 0.75rem;
             font-weight: 800;
-
             letter-spacing: 2px;
         }
 
         .pillar h3 {
             color: var(--white);
-
             font-size: 1.15rem;
-
-            margin:
-                25px 0 12px;
+            margin: 25px 0 12px;
         }
 
         .pillar p {
-            color:
-                rgba(255, 255, 255, 0.62);
-
+            color: rgba(255, 255, 255, 0.62);
             font-size: 0.9rem;
         }
 
         .what-link {
             display: inline-block;
-
             margin-top: 34px;
-
             color: var(--white);
-
             font-size: 0.92rem;
             font-weight: 700;
-
             padding-bottom: 3px;
-
-            border-bottom:
-                1px solid rgba(255, 255, 255, 0.45);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.45);
         }
-
-        .what-link:hover {
-            border-bottom-color: var(--white);
-        }
-
 
         /* ========================================
-           CHAPTER PREVIEW
+           CHAPTERS
         ======================================== */
 
         .chapters-grid {
             display: grid;
-
-            grid-template-columns:
-                repeat(2, 1fr);
-
+            grid-template-columns: repeat(2, 1fr);
             gap: 20px;
-
             margin-top: 40px;
         }
 
         .chapter-card {
             padding: 30px;
-
-            border:
-                1px solid var(--border);
-
-            transition:
-                transform 0.2s ease,
-                border-color 0.2s ease;
-        }
-
-        .chapter-card:hover {
-            transform: translateY(-3px);
-
-            border-color: var(--navy);
+            border: 1px solid var(--border);
         }
 
         .chapter-location {
             color: var(--red);
-
             text-transform: uppercase;
-
             letter-spacing: 1.5px;
-
             font-size: 0.75rem;
             font-weight: 800;
         }
 
         .chapter-card h3 {
             color: var(--navy);
-
             font-size: 1.25rem;
-
-            margin:
-                10px 0;
+            margin: 10px 0;
         }
 
         .chapter-card p {
             color: var(--muted);
-
             font-size: 0.9rem;
         }
 
         .chapters-link {
             display: inline-block;
-
             margin-top: 30px;
-
             color: var(--red);
-
             font-size: 0.92rem;
             font-weight: 700;
         }
@@ -683,22 +474,18 @@
             text-decoration: underline;
         }
 
-
         /* ========================================
-           GET INVOLVED
+           GET INVOLVED PREVIEW
         ======================================== */
 
         .cta {
             background: var(--red);
-
             color: var(--white);
-
             text-align: center;
         }
 
         .cta .section-label {
-            color:
-                rgba(255, 255, 255, 0.72);
+            color: rgba(255, 255, 255, 0.72);
         }
 
         .cta h2 {
@@ -707,18 +494,13 @@
 
         .cta p {
             max-width: 650px;
-
-            margin:
-                0 auto 30px;
-
-            color:
-                rgba(255, 255, 255, 0.82);
+            margin: 0 auto 30px;
+            color: rgba(255, 255, 255, 0.82);
         }
 
         .cta .buttons {
             justify-content: center;
         }
-
 
         /* ========================================
            FOOTER
@@ -726,45 +508,30 @@
 
         footer {
             background: var(--navy-dark);
-
             color: var(--white);
-
-            padding:
-                50px 28px 30px;
+            padding: 50px 28px 30px;
         }
 
         .footer-container {
             max-width: 1100px;
-
             margin: 0 auto;
-
             display: flex;
-
             justify-content: space-between;
             align-items: center;
-
             gap: 30px;
-
             flex-wrap: wrap;
         }
 
         .footer-brand {
-            color: var(--white);
-
             font-size: 1rem;
             font-weight: 800;
-
             letter-spacing: 2px;
         }
 
         .footer-links {
             display: flex;
-
             gap: 20px;
-
-            color:
-                rgba(255, 255, 255, 0.65);
-
+            color: rgba(255, 255, 255, 0.65);
             font-size: 0.9rem;
         }
 
@@ -774,21 +541,12 @@
 
         .copyright {
             max-width: 1100px;
-
-            margin:
-                35px auto 0;
-
+            margin: 35px auto 0;
             padding-top: 20px;
-
-            border-top:
-                1px solid rgba(255, 255, 255, 0.10);
-
-            color:
-                rgba(255, 255, 255, 0.40);
-
+            border-top: 1px solid rgba(255, 255, 255, 0.10);
+            color: rgba(255, 255, 255, 0.40);
             font-size: 0.75rem;
         }
-
 
         /* ========================================
            MOBILE
@@ -800,38 +558,24 @@
                 display: none;
             }
 
-            .hero {
-                min-height: 75vh;
-            }
-
             .about-grid,
             .philosophy-grid,
             .chapters-grid {
                 grid-template-columns: 1fr;
             }
 
-            .about-grid,
-            .philosophy-grid {
-                gap: 45px;
-            }
-
             .pillars-grid {
-                grid-template-columns:
-                    1fr 1fr;
+                grid-template-columns: 1fr 1fr;
             }
 
             section {
-                padding:
-                    75px 22px;
-
-                scroll-margin-top: 75px;
+                padding: 75px 22px;
             }
 
             .quote-logo {
                 width: 165px;
             }
         }
-
 
         @media (max-width: 520px) {
 
@@ -844,8 +588,7 @@
             }
 
             .hero-content {
-                padding:
-                    80px 22px;
+                padding: 80px 22px;
             }
 
             .quote-logo {
@@ -854,7 +597,6 @@
 
             .footer-container {
                 flex-direction: column;
-
                 align-items: flex-start;
             }
         }
@@ -863,13 +605,9 @@
 
 </head>
 
-
 <body>
 
-
-    <!-- ========================================
-         NAVIGATION
-    ======================================== -->
+    <!-- NAVIGATION -->
 
     <nav>
 
@@ -877,11 +615,8 @@
 
             <a href="./index.html"
                class="brand">
-
                 CLUB LIBERTY
-
             </a>
-
 
             <div class="nav-links">
 
@@ -897,7 +632,7 @@
                     Chapters
                 </a>
 
-                <a href="#get-involved">
+                <a href="./get-involved.html">
                     Get Involved
                 </a>
 
@@ -908,10 +643,7 @@
     </nav>
 
 
-
-    <!-- ========================================
-         HERO
-    ======================================== -->
+    <!-- HERO -->
 
     <header class="hero">
 
@@ -921,19 +653,11 @@
                 Student-led civic engagement
             </div>
 
-
             <h1>
-
                 Developing leaders.<br>
-
                 Serving communities.<br>
-
-                <span>
-                    Advancing liberty.
-                </span>
-
+                <span>Advancing liberty.</span>
             </h1>
-
 
             <p class="hero-description">
 
@@ -943,22 +667,16 @@
 
             </p>
 
-
             <div class="buttons">
 
-                <a href="#get-involved"
+                <a href="./get-involved.html"
                    class="button button-primary">
-
                     Get Involved
-
                 </a>
-
 
                 <a href="./chapters.html"
                    class="button button-secondary">
-
                     Our Chapters
-
                 </a>
 
             </div>
@@ -968,10 +686,7 @@
     </header>
 
 
-
-    <!-- ========================================
-         LOGO + MICHAEL JACKSON QUOTE
-    ======================================== -->
+    <!-- QUOTE -->
 
     <section class="quote-section">
 
@@ -982,11 +697,9 @@
                 alt="Club Liberty"
                 class="quote-logo">
 
-
             <div class="quote-stars">
                 ★ ★ ★
             </div>
-
 
             <div class="quote">
 
@@ -994,7 +707,6 @@
                 take a look at yourself and make that change.”
 
             </div>
-
 
             <div class="quote-author">
                 — Michael Jackson
@@ -1005,10 +717,7 @@
     </section>
 
 
-
-    <!-- ========================================
-         WHO WE ARE PREVIEW
-    ======================================== -->
+    <!-- ABOUT PREVIEW -->
 
     <section>
 
@@ -1016,22 +725,18 @@
 
             <div class="about-grid">
 
-                <div class="about-left">
+                <div>
 
                     <div class="section-label">
                         Who We Are
                     </div>
 
-
                     <h2>
-
                         Ideas become meaningful
                         when they become action.
-
                     </h2>
 
                 </div>
-
 
                 <div class="about-text">
 
@@ -1045,7 +750,6 @@
 
                     </p>
 
-
                     <p>
 
                         We believe civic engagement should be
@@ -1055,13 +759,9 @@
 
                     </p>
 
-
                     <div class="belief-line">
-
                         We believe leadership is service.
-
                     </div>
-
 
                     <a href="./about.html"
                        class="learn-more">
@@ -1079,12 +779,9 @@
     </section>
 
 
+    <!-- PHILOSOPHY -->
 
-    <!-- ========================================
-         PHILOSOPHY
-    ======================================== -->
-
-    <section class="philosophy-section">
+    <section>
 
         <div class="container">
 
@@ -1096,16 +793,12 @@
                         Our Philosophy
                     </div>
 
-
                     <h2>
-
                         Public service should
                         actually serve people.
-
                     </h2>
 
                 </div>
-
 
                 <div>
 
@@ -1138,14 +831,11 @@
 
                     </div>
 
-
                     <div class="principles">
 
                         <div class="principle">
 
-                            <h3>
-                                Learn
-                            </h3>
+                            <h3>Learn</h3>
 
                             <p>
 
@@ -1157,12 +847,9 @@
 
                         </div>
 
-
                         <div class="principle">
 
-                            <h3>
-                                Lead
-                            </h3>
+                            <h3>Lead</h3>
 
                             <p>
 
@@ -1174,12 +861,9 @@
 
                         </div>
 
-
                         <div class="principle">
 
-                            <h3>
-                                Serve
-                            </h3>
+                            <h3>Serve</h3>
 
                             <p>
 
@@ -1201,10 +885,7 @@
     </section>
 
 
-
-    <!-- ========================================
-         WHAT WE DO PREVIEW
-    ======================================== -->
+    <!-- WHAT WE DO -->
 
     <section class="what-preview">
 
@@ -1214,109 +895,75 @@
                 What We Do
             </div>
 
-
             <h2>
-
                 From civic engagement<br>
                 to community impact.
-
             </h2>
-
 
             <div class="pillars-grid">
 
                 <div class="pillar">
 
-                    <div class="pillar-number">
-                        01
-                    </div>
+                    <div class="pillar-number">01</div>
 
-                    <h3>
-                        Civic Engagement
-                    </h3>
+                    <h3>Civic Engagement</h3>
 
                     <p>
-
                         Debates, guest speakers,
                         voter participation, and opportunities
                         for students to engage seriously
                         with civic life.
-
                     </p>
 
                 </div>
 
-
                 <div class="pillar">
 
-                    <div class="pillar-number">
-                        02
-                    </div>
+                    <div class="pillar-number">02</div>
 
-                    <h3>
-                        Leadership
-                    </h3>
+                    <h3>Leadership</h3>
 
                     <p>
-
                         Developing chapter leaders through
                         responsibility, organization,
                         fundraising, and real-world experience.
-
                     </p>
 
                 </div>
 
-
                 <div class="pillar">
 
-                    <div class="pillar-number">
-                        03
-                    </div>
+                    <div class="pillar-number">03</div>
 
-                    <h3>
-                        Community Service
-                    </h3>
+                    <h3>Community Service</h3>
 
                     <p>
-
                         Turning conviction into direct
                         service that strengthens people,
                         families, and local communities.
-
                     </p>
 
                 </div>
 
-
                 <div class="pillar">
 
-                    <div class="pillar-number">
-                        04
-                    </div>
+                    <div class="pillar-number">04</div>
 
-                    <h3>
-                        Humanitarian Projects
-                    </h3>
+                    <h3>Humanitarian Projects</h3>
 
                     <p>
-
                         Building larger initiatives focused
                         on children, families, education,
                         essential needs, and human dignity.
-
                     </p>
 
                 </div>
 
             </div>
 
-
             <a href="./what-we-do.html"
                class="what-link">
-
                 Explore what we do →
-
             </a>
 
         </div>
@@ -1324,10 +971,7 @@
     </section>
 
 
-
-    <!-- ========================================
-         CHAPTERS PREVIEW
-    ======================================== -->
+    <!-- CHAPTERS -->
 
     <section>
 
@@ -1337,14 +981,10 @@
                 Our Chapters
             </div>
 
-
             <h2>
-
                 Growing through<br>
                 student leadership.
-
             </h2>
-
 
             <div class="chapters-grid">
 
@@ -1359,15 +999,12 @@
                     </h3>
 
                     <p>
-
                         The founding chapter of Club Liberty,
                         led by Tristan Silva and focused on
                         civic engagement, leadership, and service.
-
                     </p>
 
                 </div>
-
 
                 <div class="chapter-card">
 
@@ -1380,23 +1017,18 @@
                     </h3>
 
                     <p>
-
                         Club Liberty's first expansion chapter,
                         led by Luke Taylor and helping grow the
                         organization across Southern California.
-
                     </p>
 
                 </div>
 
             </div>
 
-
             <a href="./chapters.html"
                class="chapters-link">
-
                 Explore our chapters →
-
             </a>
 
         </div>
@@ -1404,13 +1036,9 @@
     </section>
 
 
+    <!-- GET INVOLVED PREVIEW -->
 
-    <!-- ========================================
-         GET INVOLVED
-    ======================================== -->
-
-    <section id="get-involved"
-             class="cta">
+    <section class="cta">
 
         <div class="container">
 
@@ -1418,14 +1046,10 @@
                 Get Involved
             </div>
 
-
             <h2>
-
                 Don't just care.<br>
                 Get involved.
-
             </h2>
-
 
             <p>
 
@@ -1437,14 +1061,13 @@
 
             </p>
 
-
             <div class="buttons">
 
                 <a
-                    href="mailto:info@clubliberty.org"
+                    href="./get-involved.html"
                     class="button button-primary">
 
-                    Contact Us
+                    Get Involved
 
                 </a>
 
@@ -1455,10 +1078,7 @@
     </section>
 
 
-
-    <!-- ========================================
-         FOOTER
-    ======================================== -->
+    <!-- FOOTER -->
 
     <footer>
 
@@ -1467,7 +1087,6 @@
             <div class="footer-brand">
                 CLUB LIBERTY
             </div>
-
 
             <div class="footer-links">
 
@@ -1483,6 +1102,10 @@
                     Chapters
                 </a>
 
+                <a href="./get-involved.html">
+                    Get Involved
+                </a>
+
                 <a
                     href="https://www.instagram.com/club.liberty/"
                     target="_blank"
@@ -1492,23 +1115,15 @@
 
                 </a>
 
-                <a href="mailto:info@clubliberty.org">
-                    Contact
-                </a>
-
             </div>
 
         </div>
 
-
         <div class="copyright">
-
             © 2026 Club Liberty. All rights reserved.
-
         </div>
 
     </footer>
-
 
 </body>
 
