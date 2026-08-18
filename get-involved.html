@@ -18,17 +18,12 @@
             --navy: #0B1F3A;
             --navy-light: #132E50;
             --navy-dark: #071527;
-
             --white: #FFFFFF;
-
             --red: #8F2D35;
             --red-light: #D7A3A7;
-
             --light: #F5F7FA;
-
             --text: #172235;
             --muted: #64748B;
-
             --border: #E2E8F0;
         }
 
@@ -73,24 +68,17 @@
 
         .section-label {
             color: var(--red);
-
             text-transform: uppercase;
-
             letter-spacing: 2px;
-
             font-size: 0.75rem;
             font-weight: 800;
-
             margin-bottom: 14px;
         }
 
         h2 {
             color: var(--navy);
-
             font-size: clamp(2rem, 5vw, 3.4rem);
-
             line-height: 1.05;
-
             margin-bottom: 20px;
         }
 
@@ -101,9 +89,7 @@
 
         nav {
             position: sticky;
-
             top: 0;
-
             z-index: 1000;
 
             background: rgba(11, 31, 58, 0.97);
@@ -117,40 +103,82 @@
 
         .nav-container {
             max-width: 1200px;
-
             margin: 0 auto;
-
             padding: 18px 28px;
 
             display: flex;
-
             justify-content: space-between;
             align-items: center;
+
+            position: relative;
         }
 
         .brand {
             color: var(--white);
-
             font-size: 1.15rem;
             font-weight: 800;
-
             letter-spacing: 2px;
         }
 
         .nav-links {
             display: flex;
-
             align-items: center;
-
             gap: 28px;
 
             color: rgba(255, 255, 255, 0.84);
-
             font-size: 0.9rem;
         }
 
         .nav-links a:hover {
             color: var(--white);
+        }
+
+
+        /* ========================================
+           MOBILE MENU BUTTON
+        ======================================== */
+
+        .menu-toggle {
+            display: none;
+
+            background: transparent;
+            border: none;
+
+            width: 38px;
+            height: 38px;
+
+            cursor: pointer;
+
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            gap: 5px;
+        }
+
+        .menu-toggle span {
+            display: block;
+
+            width: 24px;
+            height: 2px;
+
+            background: var(--white);
+
+            transition:
+                transform 0.25s ease,
+                opacity 0.25s ease;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
         }
 
 
@@ -173,7 +201,6 @@
                 );
 
             color: var(--white);
-
             padding: 120px 28px 105px;
         }
 
@@ -192,9 +219,7 @@
             color: var(--white);
 
             font-size: clamp(3rem, 8vw, 5.8rem);
-
             line-height: 0.98;
-
             letter-spacing: -3px;
 
             margin-bottom: 26px;
@@ -219,20 +244,15 @@
 
         .actions-grid {
             display: grid;
-
-            grid-template-columns:
-                repeat(2, 1fr);
+            grid-template-columns: repeat(2, 1fr);
 
             gap: 20px;
-
             margin-top: 42px;
         }
 
         .action-card {
             background: var(--white);
-
             border: 1px solid var(--border);
-
             padding: 32px;
 
             transition:
@@ -242,7 +262,6 @@
 
         .action-card:hover {
             transform: translateY(-3px);
-
             border-color: var(--navy);
         }
 
@@ -389,7 +408,6 @@
 
         footer {
             background: var(--navy-dark);
-
             color: var(--white);
 
             padding: 50px 28px 30px;
@@ -397,7 +415,6 @@
 
         .footer-container {
             max-width: 1100px;
-
             margin: 0 auto;
 
             display: flex;
@@ -406,16 +423,12 @@
             align-items: center;
 
             gap: 30px;
-
             flex-wrap: wrap;
         }
 
         .footer-brand {
-            color: var(--white);
-
             font-size: 1rem;
             font-weight: 800;
-
             letter-spacing: 2px;
         }
 
@@ -424,8 +437,7 @@
 
             gap: 20px;
 
-            color:
-                rgba(255, 255, 255, 0.65);
+            color: rgba(255, 255, 255, 0.65);
 
             font-size: 0.9rem;
         }
@@ -437,16 +449,14 @@
         .copyright {
             max-width: 1100px;
 
-            margin:
-                35px auto 0;
+            margin: 35px auto 0;
 
             padding-top: 20px;
 
             border-top:
                 1px solid rgba(255, 255, 255, 0.10);
 
-            color:
-                rgba(255, 255, 255, 0.40);
+            color: rgba(255, 255, 255, 0.40);
 
             font-size: 0.75rem;
         }
@@ -458,8 +468,49 @@
 
         @media (max-width: 800px) {
 
+            .menu-toggle {
+                display: flex;
+            }
+
             .nav-links {
                 display: none;
+
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+
+                background: var(--navy);
+
+                padding: 18px 28px 24px;
+
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0;
+
+                border-top:
+                    1px solid rgba(255, 255, 255, 0.08);
+
+                box-shadow:
+                    0 10px 24px rgba(0, 0, 0, 0.15);
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .nav-links a {
+                width: 100%;
+                padding: 14px 0;
+
+                border-bottom:
+                    1px solid rgba(255, 255, 255, 0.08);
+
+                color: rgba(255, 255, 255, 0.88);
+            }
+
+            .nav-links a:last-child {
+                border-bottom: none;
             }
 
             .actions-grid {
@@ -495,9 +546,7 @@
 <body>
 
 
-    <!-- ========================================
-         NAVIGATION
-    ======================================== -->
+    <!-- NAVIGATION -->
 
     <nav>
 
@@ -511,7 +560,22 @@
             </a>
 
 
-            <div class="nav-links">
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="navLinks">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+
+            <div class="nav-links"
+                 id="navLinks">
 
                 <a href="./about.html">
                     About
@@ -537,9 +601,7 @@
 
 
 
-    <!-- ========================================
-         HERO
-    ======================================== -->
+    <!-- HERO -->
 
     <header class="hero">
 
@@ -573,9 +635,7 @@
 
 
 
-    <!-- ========================================
-         WAYS TO GET INVOLVED
-    ======================================== -->
+    <!-- WAYS TO GET INVOLVED -->
 
     <section class="actions-section">
 
@@ -596,8 +656,6 @@
 
             <div class="actions-grid">
 
-
-                <!-- JOIN -->
 
                 <div class="action-card">
 
@@ -628,8 +686,6 @@
                 </div>
 
 
-                <!-- START -->
-
                 <div class="action-card">
 
                     <div class="action-number">
@@ -659,8 +715,6 @@
                 </div>
 
 
-                <!-- VOLUNTEER -->
-
                 <div class="action-card">
 
                     <div class="action-number">
@@ -689,8 +743,6 @@
 
                 </div>
 
-
-                <!-- PARTNER -->
 
                 <div class="action-card">
 
@@ -730,9 +782,7 @@
 
 
 
-    <!-- ========================================
-         CONTACT
-    ======================================== -->
+    <!-- CONTACT -->
 
     <section class="contact-section">
 
@@ -744,9 +794,7 @@
 
 
             <h2>
-
                 Have a question?
-
             </h2>
 
 
@@ -788,9 +836,7 @@
 
 
 
-    <!-- ========================================
-         FINAL CTA
-    ======================================== -->
+    <!-- FINAL CTA -->
 
     <section class="final-cta">
 
@@ -823,9 +869,7 @@
 
 
 
-    <!-- ========================================
-         FOOTER
-    ======================================== -->
+    <!-- FOOTER -->
 
     <footer>
 
@@ -869,12 +913,58 @@
 
 
         <div class="copyright">
-
             © 2026 Club Liberty. All rights reserved.
-
         </div>
 
     </footer>
+
+
+
+    <!-- MOBILE NAVIGATION SCRIPT -->
+
+    <script>
+
+        const menuToggle =
+            document.getElementById("menuToggle");
+
+        const navLinks =
+            document.getElementById("navLinks");
+
+        menuToggle.addEventListener("click", function () {
+
+            const isOpen =
+                navLinks.classList.toggle("open");
+
+            menuToggle.classList.toggle(
+                "active",
+                isOpen
+            );
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                isOpen
+            );
+
+        });
+
+        navLinks.querySelectorAll("a").forEach(function (link) {
+
+            link.addEventListener("click", function () {
+
+                navLinks.classList.remove("open");
+
+                menuToggle.classList.remove("active");
+
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+            });
+
+        });
+
+    </script>
 
 
 </body>
