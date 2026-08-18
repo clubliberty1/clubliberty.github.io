@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chapters | Club Liberty</title>
+
+    <meta name="description"
+        content="Explore Club Liberty chapters, meet chapter leaders, connect with local chapter accounts, and learn how to start a chapter at your university.">
+
+    <style>
+
+        :root {
+            --navy: #0B1F3A;
+            --navy-light: #132E50;
+            --navy-dark: #071527;
+
+            --white: #FFFFFF;
+
+            --red: #8F2D35;
+            --red-light: #D7A3A7;
+
+            --light: #F5F7FA;
+
+            --text: #172235;
+            --muted: #64748B;
+
+            --border: #E2E8F0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Helvetica,
+                Arial,
+                sans-serif;
+
+            background: var(--white);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 95px 28px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            color: var(--red);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            margin-bottom: 14px;
+        }
+
+        h2 {
+            color: var(--navy);
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            line-height: 1.05;
+            margin-bottom: 22px;
+        }
+
+        p {
+            color: var(--muted);
+        }
+
+
+        /* ========================================
+           NAVIGATION
+        ======================================== */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background: rgba(11, 31, 58, 0.97);
+
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+
+            border-bottom:
+                1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 18px 28px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            color: var(--white);
+            font-size: 1.15rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+
+            color: rgba(255, 255, 255, 0.84);
+
+            font-size: 0.9rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--white);
+        }
+
+
+        /* ========================================
+           HERO
+        ======================================== */
+
+        .hero {
+            background:
+                radial-gradient(
+                    circle at 85% 20%,
+                    rgba(143, 45, 53, 0.17),
+                    transparent 28%
+                ),
+                linear-gradient(
+                    135deg,
+                    var(--navy-dark) 0%,
+                    var(--navy) 55%,
+                    #102C4D 100%
+                );
+
+            color: var(--white);
+
+            padding: 120px 28px 110px;
+        }
+
+        .hero-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .hero .section-label {
+            color: var(--red-light);
+        }
+
+        .hero h1 {
+            max-width: 900px;
+
+            color: var(--white);
+
+            font-size: clamp(3rem, 8vw, 6rem);
+
+            line-height: 0.98;
+
+            letter-spacing: -3px;
+
+            margin-bottom: 28px;
+        }
+
+        .hero p {
+            max-width: 720px;
+
+            color: rgba(255, 255, 255, 0.78);
+
+            font-size: 1.15rem;
+        }
+
+
+        /* ========================================
+           CHAPTER INTRO
+        ======================================== */
+
+        .intro-grid {
+            display: grid;
+
+            grid-template-columns: 0.9fr 1.1fr;
+
+            gap: 70px;
+
+            align-items: start;
+        }
+
+        .intro-copy {
+            font-size: 1.05rem;
+        }
+
+
+        /* ========================================
+           CHAPTER CARDS
+        ======================================== */
+
+        .chapters-section {
+            background: var(--light);
+        }
+
+        .chapter-list {
+            display: grid;
+            gap: 26px;
+            margin-top: 45px;
+        }
+
+        .chapter-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+
+            padding: 34px;
+
+            display: grid;
+
+            grid-template-columns: 1.15fr 0.85fr;
+
+            gap: 50px;
+
+            align-items: start;
+
+            transition:
+                border-color 0.2s ease,
+                transform 0.2s ease;
+        }
+
+        .chapter-card:hover {
+            border-color: var(--navy);
+            transform: translateY(-3px);
+        }
+
+        .chapter-badge {
+            display: inline-block;
+
+            margin-bottom: 14px;
+
+            color: var(--red);
+
+            text-transform: uppercase;
+
+            letter-spacing: 1.5px;
+
+            font-size: 0.72rem;
+            font-weight: 800;
+        }
+
+        .chapter-card h3 {
+            color: var(--navy);
+
+            font-size: 1.7rem;
+
+            margin-bottom: 5px;
+        }
+
+        .chapter-location {
+            color: var(--muted);
+
+            font-size: 0.92rem;
+
+            margin-bottom: 20px;
+        }
+
+        .chapter-description {
+            font-size: 0.98rem;
+        }
+
+        .chapter-meta {
+            display: grid;
+            gap: 18px;
+        }
+
+        .meta-block {
+            border-left: 3px solid var(--red);
+            padding-left: 18px;
+        }
+
+        .meta-label {
+            color: var(--red);
+
+            text-transform: uppercase;
+
+            letter-spacing: 1.2px;
+
+            font-size: 0.7rem;
+            font-weight: 800;
+
+            margin-bottom: 4px;
+        }
+
+        .meta-value {
+            color: var(--navy);
+
+            font-weight: 700;
+        }
+
+        .chapter-actions {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 12px;
+
+            margin-top: 24px;
+        }
+
+        .button {
+            display: inline-block;
+
+            padding: 12px 20px;
+
+            border-radius: 4px;
+
+            font-size: 0.9rem;
+            font-weight: 700;
+
+            transition:
+                transform 0.2s ease,
+                background 0.2s ease,
+                color 0.2s ease;
+        }
+
+        .button-primary {
+            background: var(--red);
+            color: var(--white);
+        }
+
+        .button-primary:hover {
+            transform: translateY(-2px);
+        }
+
+        .button-secondary {
+            color: var(--navy);
+
+            border: 1px solid var(--navy);
+        }
+
+        .button-secondary:hover {
+            background: var(--navy);
+            color: var(--white);
+        }
+
+
+        /* ========================================
+           CHAPTER MODEL
+        ======================================== */
+
+        .model-grid {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 70px;
+
+            align-items: start;
+        }
+
+        .model-list {
+            display: grid;
+            gap: 16px;
+        }
+
+        .model-item {
+            background: var(--light);
+
+            border: 1px solid var(--border);
+
+            padding: 24px;
+        }
+
+        .model-item h3 {
+            color: var(--navy);
+
+            font-size: 1rem;
+
+            margin-bottom: 6px;
+        }
+
+        .model-item p {
+            font-size: 0.92rem;
+        }
+
+
+        /* ========================================
+           CHAPTER STANDARD
+        ======================================== */
+
+        .standard-section {
+            background: var(--navy);
+            color: var(--white);
+        }
+
+        .standard-section h2 {
+            color: var(--white);
+        }
+
+        .standard-section .section-label {
+            color: var(--red-light);
+        }
+
+        .standard-grid {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 70px;
+
+            align-items: start;
+        }
+
+        .standard-copy {
+            color: rgba(255, 255, 255, 0.72);
+
+            font-size: 1.05rem;
+        }
+
+        .standard-callout {
+            border:
+                1px solid rgba(255, 255, 255, 0.14);
+
+            background:
+                rgba(255, 255, 255, 0.04);
+
+            padding: 30px;
+        }
+
+        .standard-callout strong {
+            display: block;
+
+            color: var(--white);
+
+            font-size: 1.3rem;
+
+            margin-bottom: 10px;
+        }
+
+        .standard-callout p {
+            color: rgba(255, 255, 255, 0.68);
+        }
+
+
+        /* ========================================
+           START A CHAPTER
+        ======================================== */
+
+        .start-section {
+            background: var(--red);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .start-section .section-label {
+            color: rgba(255, 255, 255, 0.72);
+        }
+
+        .start-section h2 {
+            color: var(--white);
+        }
+
+        .start-section p {
+            max-width: 700px;
+
+            margin: 0 auto 30px;
+
+            color: rgba(255, 255, 255, 0.82);
+
+            font-size: 1.05rem;
+        }
+
+        .button-light {
+            background: var(--white);
+            color: var(--navy);
+        }
+
+        .button-light:hover {
+            transform: translateY(-2px);
+        }
+
+
+        /* ========================================
+           FOOTER
+        ======================================== */
+
+        footer {
+            background: var(--navy-dark);
+            color: var(--white);
+
+            padding: 50px 28px 30px;
+        }
+
+        .footer-container {
+            max-width: 1100px;
+            margin: 0 auto;
+
+            display: flex;
+
+            justify-content: space-between;
+            align-items: center;
+
+            gap: 30px;
+
+            flex-wrap: wrap;
+        }
+
+        .footer-brand {
+            font-size: 1rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .footer-links {
+            display: flex;
+
+            gap: 20px;
+
+            color: rgba(255, 255, 255, 0.65);
+
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+        }
+
+        .copyright {
+            max-width: 1100px;
+
+            margin: 35px auto 0;
+
+            padding-top: 20px;
+
+            border-top:
+                1px solid rgba(255, 255, 255, 0.10);
+
+            color: rgba(255, 255, 255, 0.40);
+
+            font-size: 0.75rem;
+        }
+
+
+        /* ========================================
+           MOBILE
+        ======================================== */
+
+        @media (max-width: 800px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .intro-grid,
+            .chapter-card,
+            .model-grid,
+            .standard-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 75px 22px;
+            }
+
+            .hero {
+                padding: 95px 22px 85px;
+            }
+        }
+
+        @media (max-width: 520px) {
+
+            .hero h1 {
+                letter-spacing: -2px;
+            }
+
+            .chapter-card {
+                padding: 26px 22px;
+            }
+
+            .footer-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ========================================
+         NAVIGATION
+    ======================================== -->
+
+    <nav>
+
+        <div class="nav-container">
+
+            <a href="./index.html"
+               class="brand">
+
+                CLUB LIBERTY
+
+            </a>
+
+
+            <div class="nav-links">
+
+                <a href="./about.html">
+                    About
+                </a>
+
+                <a href="./what-we-do.html">
+                    What We Do
+                </a>
+
+                <a href="./chapters.html">
+                    Chapters
+                </a>
+
+                <a href="./index.html#get-involved">
+                    Get Involved
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ========================================
+         HERO
+    ======================================== -->
+
+    <header class="hero">
+
+        <div class="hero-inner">
+
+            <div class="section-label">
+                Our Chapters
+            </div>
+
+            <h1>
+
+                Local leadership.
+                Shared mission.
+
+            </h1>
+
+            <p>
+
+                Club Liberty chapters bring civic engagement,
+                leadership development, and community service
+                directly to university campuses.
+
+                Each chapter has room to lead locally while
+                remaining part of one broader mission.
+
+            </p>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ========================================
+         INTRO
+    ======================================== -->
+
+    <section>
+
+        <div class="container">
+
+            <div class="intro-grid">
+
+                <div>
+
+                    <div class="section-label">
+                        The Chapter Network
+                    </div>
+
+                    <h2>
+
+                        Built locally.
+                        Connected nationally.
+
+                    </h2>
+
+                </div>
+
+
+                <div class="intro-copy">
+
+                    <p>
+
+                        Club Liberty chapters are student-led communities
+                        that bring our mission directly to campus.
+
+                    </p>
+
+                    <br>
+
+                    <p>
+
+                        Chapter presidents and their leadership teams
+                        organize events, build partnerships, fundraise,
+                        serve their communities, and respond to the
+                        opportunities unique to their university.
+
+                    </p>
+
+                    <br>
+
+                    <p>
+
+                        Every chapter remains connected to Club Liberty's
+                        broader values and standards while retaining
+                        meaningful autonomy over local programming.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ========================================
+         CURRENT CHAPTERS
+    ======================================== -->
+
+    <section class="chapters-section">
+
+        <div class="container">
+
+            <div class="section-label">
+                Current Chapters
+            </div>
+
+            <h2>
+
+                Where Club Liberty
+                is growing today.
+
+            </h2>
+
+
+            <div class="chapter-list">
+
+
+                <!-- CAL LUTHERAN -->
+
+                <div class="chapter-card">
+
+                    <div>
+
+                        <div class="chapter-badge">
+                            Founding Chapter
+                        </div>
+
+                        <h3>
+                            California Lutheran University
+                        </h3>
+
+                        <div class="chapter-location">
+                            Thousand Oaks, California
+                        </div>
+
+                        <p class="chapter-description">
+
+                            Club Liberty began at California Lutheran
+                            University in 2026.
+
+                            The founding chapter combines campus civic
+                            programming, student leadership, debate,
+                            community involvement, and service projects.
+
+                        </p>
+
+
+                        <div class="chapter-actions">
+
+                            <a
+                                href="https://forms.gle/AgUGDDYGUqYeUtR18"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="button button-primary">
+
+                                Join the CLU Chapter
+
+                            </a>
+
+
+                            <a
+                                href="https://www.instagram.com/clubliberty.clu/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="button button-secondary">
+
+                                @clubliberty.clu
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="chapter-meta">
+
+                        <div class="meta-block">
+
+                            <div class="meta-label">
+                                Chapter President
+                            </div>
+
+                            <div class="meta-value">
+                                Tristan Silva
+                            </div>
+
+                        </div>
+
+
+                        <div class="meta-block">
+
+                            <div class="meta-label">
+                                Founded
+                            </div>
+
+                            <div class="meta-value">
+                                2026
+                            </div>
+
+                        </div>
+
+
+                        <div class="meta-block">
+
+                            <div class="meta-label">
+                                Campus
+                            </div>
+
+                            <div class="meta-value">
+                                California Lutheran University
+                            </div>
+
+                        </div>
+
+
+                        <div class="meta-block">
+
+                            <div class="meta-label">
+                                Chapter Type
+                            </div>
+
+                            <div class="meta-value">
+                                Founding Chapter
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- AZUSA PACIFIC -->
+
+                <div class="chapter-card">
+
+                    <div>
+
+                        <div class="chapter-badge">
+                            First Expansion Chapter
+                        </div>
+
+                        <h3>
+                            Azusa Pacific University
+                        </h3>
+
+                        <div class="chapter-location">
+                            Azusa, California
+                        </div>
+
+                        <p class="chapter-description">
+
+                            The Azusa Pacific University chapter became
+                            Club Liberty's first expansion beyond the
+                            founding campus.
+
+                            The chapter carries the same commitment
+                            to civic engagement, leadership, service,
+                            and faith-informed community involvement.
+
+                        </p>
+
+
+                        <div class="chapter-actions">
+
+                            <a
+                                href="https://www.instagram.com/club_libertyapu/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="button button-primary">
+
+                                @club_libertyapu
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="chapter-meta">
+
+                        <div class="meta-block">
+
+                            <div class="meta-label">
+                                Chapter President
+                            </div>
+
+                            <div class="meta-value">
+                                Luke Taylor
+                            </div>
+
+                        </div>
+
+
+                        <div class="meta-block">
+
+                            <div class="meta-label">
+                                Campus
+                            </div>
+
+                            <div class="meta-value">
+                                Azusa Pacific University
+                            </div>
+
+                        </div>
+
+
+                        <div class="meta-block">
+
+                            <div class="meta-label">
+                                Chapter Type
+                            </div>
+
+                            <div class="meta-value">
+                                First Expansion Chapter
+                            </div>
+
+                        </div>
+
+
+                        <div class="meta-block">
+
+                            <div class="meta-label">
+                                Organization Role
+                            </div>
+
+                            <div class="meta-value">
+                                Led by Club Liberty Co-Founder & Vice President Luke Taylor
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ========================================
+         HOW CHAPTERS OPERATE
+    ======================================== -->
+
+    <section>
+
+        <div class="container">
+
+            <div class="model-grid">
+
+                <div>
+
+                    <div class="section-label">
+                        How Chapters Operate
+                    </div>
+
+                    <h2>
+
+                        One organization.
+                        Different campuses.
+
+                    </h2>
+
+                    <p>
+
+                        Club Liberty gives chapter leaders room to respond
+                        to their own campus while preserving the mission,
+                        standards, and identity of the broader organization.
+
+                    </p>
+
+                </div>
+
+
+                <div class="model-list">
+
+
+                    <div class="model-item">
+
+                        <h3>
+                            Local Leadership
+                        </h3>
+
+                        <p>
+
+                            Each chapter is led by students who understand
+                            their own university, campus culture,
+                            and local community.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="model-item">
+
+                        <h3>
+                            Meaningful Autonomy
+                        </h3>
+
+                        <p>
+
+                            Chapter leaders can develop events,
+                            partnerships, service projects,
+                            and programming suited to their campus.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="model-item">
+
+                        <h3>
+                            Shared Standards
+                        </h3>
+
+                        <p>
+
+                            Every chapter operates within Club Liberty's
+                            mission, Christian values, civic principles,
+                            and organizational expectations.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="model-item">
+
+                        <h3>
+                            Leadership Support
+                        </h3>
+
+                        <p>
+
+                            Club Liberty provides training and guidance
+                            in fundraising, event planning, outreach,
+                            organization, and chapter development.
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ========================================
+         CHAPTER STANDARD
+    ======================================== -->
+
+    <section class="standard-section">
+
+        <div class="container">
+
+            <div class="standard-grid">
+
+                <div>
+
+                    <div class="section-label">
+                        The Chapter Standard
+                    </div>
+
+                    <h2>
+
+                        Talk about ideas.
+                        Then put them into practice.
+
+                    </h2>
+
+                </div>
+
+
+                <div>
+
+                    <div class="standard-copy">
+
+                        Every Club Liberty chapter is expected to
+                        participate in both civic programming
+                        and community service.
+
+                        <br><br>
+
+                        Debate, speakers, civic participation,
+                        and political discussion matter.
+
+                        But they should never become an excuse
+                        to stop at words.
+
+                    </div>
+
+
+                    <div class="standard-callout"
+                         style="margin-top: 30px;">
+
+                        <strong>
+                            Civic engagement + service.
+                        </strong>
+
+                        <p>
+
+                            Our chapters should be places where students
+                            learn to defend their convictions and then
+                            develop the discipline to live those
+                            convictions through service.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ========================================
+         START A CHAPTER
+    ======================================== -->
+
+    <section class="start-section">
+
+        <div class="container">
+
+            <div class="section-label">
+                Start A Chapter
+            </div>
+
+            <h2>
+
+                Bring Club Liberty
+                to your university.
+
+            </h2>
+
+            <p>
+
+                Club Liberty is building a network of student-led
+                chapters committed to civic engagement, leadership,
+                service, and faith-informed action.
+
+                If your campus does not yet have a chapter,
+                you can help build the next one.
+
+            </p>
+
+
+            <a
+                href="mailto:info@clubliberty.org?subject=Start%20a%20Club%20Liberty%20Chapter"
+                class="button button-light">
+
+                Start a Chapter
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ========================================
+         FOOTER
+    ======================================== -->
+
+    <footer>
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+                CLUB LIBERTY
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="./index.html">
+                    Home
+                </a>
+
+                <a href="./about.html">
+                    About
+                </a>
+
+                <a href="./what-we-do.html">
+                    What We Do
+                </a>
+
+                <a
+                    href="https://www.instagram.com/club.liberty/"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    Instagram
+
+                </a>
+
+                <a href="mailto:info@clubliberty.org">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 Club Liberty. All rights reserved.
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
