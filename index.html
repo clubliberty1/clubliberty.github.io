@@ -86,6 +86,7 @@
             margin-bottom: 22px;
         }
 
+
         /* ========================================
            NAVIGATION
         ======================================== */
@@ -104,9 +105,12 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 18px 28px;
+
             display: flex;
             justify-content: space-between;
             align-items: center;
+
+            position: relative;
         }
 
         .brand {
@@ -132,6 +136,56 @@
         .nav-links a:hover {
             color: var(--white);
         }
+
+
+        /* ========================================
+           MOBILE MENU BUTTON
+        ======================================== */
+
+        .menu-toggle {
+            display: none;
+
+            background: transparent;
+            border: none;
+
+            width: 38px;
+            height: 38px;
+
+            cursor: pointer;
+
+            align-items: center;
+            justify-content: center;
+
+            flex-direction: column;
+
+            gap: 5px;
+        }
+
+        .menu-toggle span {
+            display: block;
+
+            width: 24px;
+            height: 2px;
+
+            background: var(--white);
+
+            transition:
+                transform 0.25s ease,
+                opacity 0.25s ease;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+
 
         /* ========================================
            HERO
@@ -208,6 +262,7 @@
             margin-bottom: 38px;
         }
 
+
         /* ========================================
            BUTTONS
         ======================================== */
@@ -247,6 +302,7 @@
             background: rgba(255, 255, 255, 0.08);
         }
 
+
         /* ========================================
            QUOTE
         ======================================== */
@@ -284,6 +340,7 @@
             color: var(--muted);
             font-weight: 700;
         }
+
 
         /* ========================================
            ABOUT
@@ -325,6 +382,7 @@
         .learn-more:hover {
             text-decoration: underline;
         }
+
 
         /* ========================================
            PHILOSOPHY
@@ -368,6 +426,7 @@
             color: var(--muted);
             font-size: 0.92rem;
         }
+
 
         /* ========================================
            WHAT WE DO
@@ -427,6 +486,7 @@
             border-bottom: 1px solid rgba(255, 255, 255, 0.45);
         }
 
+
         /* ========================================
            CHAPTERS
         ======================================== */
@@ -474,8 +534,9 @@
             text-decoration: underline;
         }
 
+
         /* ========================================
-           GET INVOLVED PREVIEW
+           GET INVOLVED
         ======================================== */
 
         .cta {
@@ -501,6 +562,7 @@
         .cta .buttons {
             justify-content: center;
         }
+
 
         /* ========================================
            FOOTER
@@ -548,14 +610,59 @@
             font-size: 0.75rem;
         }
 
+
         /* ========================================
            MOBILE
         ======================================== */
 
         @media (max-width: 800px) {
 
+            .menu-toggle {
+                display: flex;
+            }
+
             .nav-links {
                 display: none;
+
+                position: absolute;
+
+                top: 100%;
+                left: 0;
+                right: 0;
+
+                background: var(--navy);
+
+                padding: 18px 28px 24px;
+
+                flex-direction: column;
+                align-items: flex-start;
+
+                gap: 0;
+
+                border-top:
+                    1px solid rgba(255, 255, 255, 0.08);
+
+                box-shadow:
+                    0 10px 24px rgba(0, 0, 0, 0.15);
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .nav-links a {
+                width: 100%;
+
+                padding: 14px 0;
+
+                border-bottom:
+                    1px solid rgba(255, 255, 255, 0.08);
+
+                color: rgba(255, 255, 255, 0.88);
+            }
+
+            .nav-links a:last-child {
+                border-bottom: none;
             }
 
             .about-grid,
@@ -576,6 +683,7 @@
                 width: 165px;
             }
         }
+
 
         @media (max-width: 520px) {
 
@@ -605,9 +713,13 @@
 
 </head>
 
+
 <body>
 
-    <!-- NAVIGATION -->
+
+    <!-- ========================================
+         NAVIGATION
+    ======================================== -->
 
     <nav>
 
@@ -615,10 +727,28 @@
 
             <a href="./index.html"
                class="brand">
+
                 CLUB LIBERTY
+
             </a>
 
-            <div class="nav-links">
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="navLinks">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+
+            <div class="nav-links"
+                 id="navLinks">
 
                 <a href="./about.html">
                     About
@@ -643,7 +773,10 @@
     </nav>
 
 
-    <!-- HERO -->
+
+    <!-- ========================================
+         HERO
+    ======================================== -->
 
     <header class="hero">
 
@@ -653,11 +786,19 @@
                 Student-led civic engagement
             </div>
 
+
             <h1>
+
                 Developing leaders.<br>
+
                 Serving communities.<br>
-                <span>Advancing liberty.</span>
+
+                <span>
+                    Advancing liberty.
+                </span>
+
             </h1>
+
 
             <p class="hero-description">
 
@@ -667,16 +808,22 @@
 
             </p>
 
+
             <div class="buttons">
 
                 <a href="./get-involved.html"
                    class="button button-primary">
+
                     Get Involved
+
                 </a>
+
 
                 <a href="./chapters.html"
                    class="button button-secondary">
+
                     Our Chapters
+
                 </a>
 
             </div>
@@ -686,7 +833,10 @@
     </header>
 
 
-    <!-- QUOTE -->
+
+    <!-- ========================================
+         LOGO + QUOTE
+    ======================================== -->
 
     <section class="quote-section">
 
@@ -697,9 +847,11 @@
                 alt="Club Liberty"
                 class="quote-logo">
 
+
             <div class="quote-stars">
                 ★ ★ ★
             </div>
+
 
             <div class="quote">
 
@@ -707,6 +859,7 @@
                 take a look at yourself and make that change.”
 
             </div>
+
 
             <div class="quote-author">
                 — Michael Jackson
@@ -717,7 +870,10 @@
     </section>
 
 
-    <!-- ABOUT PREVIEW -->
+
+    <!-- ========================================
+         ABOUT
+    ======================================== -->
 
     <section>
 
@@ -731,12 +887,16 @@
                         Who We Are
                     </div>
 
+
                     <h2>
+
                         Ideas become meaningful
                         when they become action.
+
                     </h2>
 
                 </div>
+
 
                 <div class="about-text">
 
@@ -750,6 +910,7 @@
 
                     </p>
 
+
                     <p>
 
                         We believe civic engagement should be
@@ -759,9 +920,13 @@
 
                     </p>
 
+
                     <div class="belief-line">
+
                         We believe leadership is service.
+
                     </div>
+
 
                     <a href="./about.html"
                        class="learn-more">
@@ -779,7 +944,10 @@
     </section>
 
 
-    <!-- PHILOSOPHY -->
+
+    <!-- ========================================
+         PHILOSOPHY
+    ======================================== -->
 
     <section>
 
@@ -793,12 +961,16 @@
                         Our Philosophy
                     </div>
 
+
                     <h2>
+
                         Public service should
                         actually serve people.
+
                     </h2>
 
                 </div>
+
 
                 <div>
 
@@ -831,11 +1003,14 @@
 
                     </div>
 
+
                     <div class="principles">
 
                         <div class="principle">
 
-                            <h3>Learn</h3>
+                            <h3>
+                                Learn
+                            </h3>
 
                             <p>
 
@@ -847,9 +1022,12 @@
 
                         </div>
 
+
                         <div class="principle">
 
-                            <h3>Lead</h3>
+                            <h3>
+                                Lead
+                            </h3>
 
                             <p>
 
@@ -861,9 +1039,12 @@
 
                         </div>
 
+
                         <div class="principle">
 
-                            <h3>Serve</h3>
+                            <h3>
+                                Serve
+                            </h3>
 
                             <p>
 
@@ -885,7 +1066,10 @@
     </section>
 
 
-    <!-- WHAT WE DO -->
+
+    <!-- ========================================
+         WHAT WE DO
+    ======================================== -->
 
     <section class="what-preview">
 
@@ -895,75 +1079,109 @@
                 What We Do
             </div>
 
+
             <h2>
+
                 From civic engagement<br>
                 to community impact.
+
             </h2>
+
 
             <div class="pillars-grid">
 
                 <div class="pillar">
 
-                    <div class="pillar-number">01</div>
+                    <div class="pillar-number">
+                        01
+                    </div>
 
-                    <h3>Civic Engagement</h3>
+                    <h3>
+                        Civic Engagement
+                    </h3>
 
                     <p>
+
                         Debates, guest speakers,
                         voter participation, and opportunities
                         for students to engage seriously
                         with civic life.
+
                     </p>
 
                 </div>
 
+
                 <div class="pillar">
 
-                    <div class="pillar-number">02</div>
+                    <div class="pillar-number">
+                        02
+                    </div>
 
-                    <h3>Leadership</h3>
+                    <h3>
+                        Leadership
+                    </h3>
 
                     <p>
+
                         Developing chapter leaders through
                         responsibility, organization,
                         fundraising, and real-world experience.
+
                     </p>
 
                 </div>
 
+
                 <div class="pillar">
 
-                    <div class="pillar-number">03</div>
+                    <div class="pillar-number">
+                        03
+                    </div>
 
-                    <h3>Community Service</h3>
+                    <h3>
+                        Community Service
+                    </h3>
 
                     <p>
+
                         Turning conviction into direct
                         service that strengthens people,
                         families, and local communities.
+
                     </p>
 
                 </div>
 
+
                 <div class="pillar">
 
-                    <div class="pillar-number">04</div>
+                    <div class="pillar-number">
+                        04
+                    </div>
 
-                    <h3>Humanitarian Projects</h3>
+                    <h3>
+                        Humanitarian Projects
+                    </h3>
 
                     <p>
+
                         Building larger initiatives focused
                         on children, families, education,
                         essential needs, and human dignity.
+
                     </p>
 
                 </div>
 
             </div>
 
+
             <a href="./what-we-do.html"
                class="what-link">
+
                 Explore what we do →
+
             </a>
 
         </div>
@@ -971,7 +1189,10 @@
     </section>
 
 
-    <!-- CHAPTERS -->
+
+    <!-- ========================================
+         CHAPTERS
+    ======================================== -->
 
     <section>
 
@@ -981,10 +1202,14 @@
                 Our Chapters
             </div>
 
+
             <h2>
+
                 Growing through<br>
                 student leadership.
+
             </h2>
+
 
             <div class="chapters-grid">
 
@@ -999,12 +1224,15 @@
                     </h3>
 
                     <p>
+
                         The founding chapter of Club Liberty,
                         led by Tristan Silva and focused on
                         civic engagement, leadership, and service.
+
                     </p>
 
                 </div>
+
 
                 <div class="chapter-card">
 
@@ -1017,18 +1245,23 @@
                     </h3>
 
                     <p>
+
                         Club Liberty's first expansion chapter,
                         led by Luke Taylor and helping grow the
                         organization across Southern California.
+
                     </p>
 
                 </div>
 
             </div>
 
+
             <a href="./chapters.html"
                class="chapters-link">
+
                 Explore our chapters →
+
             </a>
 
         </div>
@@ -1036,7 +1269,10 @@
     </section>
 
 
-    <!-- GET INVOLVED PREVIEW -->
+
+    <!-- ========================================
+         GET INVOLVED
+    ======================================== -->
 
     <section class="cta">
 
@@ -1046,10 +1282,14 @@
                 Get Involved
             </div>
 
+
             <h2>
+
                 Don't just care.<br>
                 Get involved.
+
             </h2>
+
 
             <p>
 
@@ -1060,6 +1300,7 @@
                 Leadership begins when you decide to serve.
 
             </p>
+
 
             <div class="buttons">
 
@@ -1078,7 +1319,10 @@
     </section>
 
 
-    <!-- FOOTER -->
+
+    <!-- ========================================
+         FOOTER
+    ======================================== -->
 
     <footer>
 
@@ -1087,6 +1331,7 @@
             <div class="footer-brand">
                 CLUB LIBERTY
             </div>
+
 
             <div class="footer-links">
 
@@ -1119,11 +1364,67 @@
 
         </div>
 
+
         <div class="copyright">
+
             © 2026 Club Liberty. All rights reserved.
+
         </div>
 
     </footer>
+
+
+
+    <!-- ========================================
+         MOBILE NAVIGATION SCRIPT
+    ======================================== -->
+
+    <script>
+
+        const menuToggle =
+            document.getElementById("menuToggle");
+
+        const navLinks =
+            document.getElementById("navLinks");
+
+
+        menuToggle.addEventListener("click", function () {
+
+            const isOpen =
+                navLinks.classList.toggle("open");
+
+            menuToggle.classList.toggle(
+                "active",
+                isOpen
+            );
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                isOpen
+            );
+
+        });
+
+
+        navLinks.querySelectorAll("a").forEach(function (link) {
+
+            link.addEventListener("click", function () {
+
+                navLinks.classList.remove("open");
+
+                menuToggle.classList.remove("active");
+
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+            });
+
+        });
+
+    </script>
+
 
 </body>
 
