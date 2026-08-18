@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Club Liberty | Leadership Is Service</title>
+
+    <meta name="description"
+        content="Learn the story, mission, values, faith, and leadership behind Club Liberty, an independent civic organization founded in 2026 at California Lutheran University.">
+
+    <style>
+
+        :root {
+            --navy: #0B1F3A;
+            --navy-light: #132E50;
+            --white: #FFFFFF;
+            --red: #8F2D35;
+            --light: #F5F7FA;
+            --text: #172235;
+            --muted: #64748B;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                Roboto, Helvetica, Arial, sans-serif;
+
+            color: var(--text);
+            background: var(--white);
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 95px 28px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .section-label {
+            color: var(--red);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            margin-bottom: 14px;
+        }
+
+        h2 {
+            color: var(--navy);
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            line-height: 1.05;
+            margin-bottom: 22px;
+        }
+
+        p {
+            color: var(--muted);
+        }
+
+
+        /* NAV */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background: rgba(11, 31, 58, 0.97);
+            backdrop-filter: blur(10px);
+
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 18px 28px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: var(--white);
+            font-size: 1.15rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 0.9rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--white);
+        }
+
+
+        /* HERO */
+
+        .hero {
+            background:
+                radial-gradient(
+                    circle at 85% 20%,
+                    rgba(143, 45, 53, 0.17),
+                    transparent 28%
+                ),
+                linear-gradient(
+                    135deg,
+                    #071527 0%,
+                    #0B1F3A 55%,
+                    #102C4D 100%
+                );
+
+            color: var(--white);
+
+            padding: 120px 28px 110px;
+        }
+
+        .hero-inner {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .hero .section-label {
+            color: #D7A3A7;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 8vw, 6rem);
+            line-height: 0.98;
+            letter-spacing: -3px;
+            max-width: 900px;
+            margin-bottom: 28px;
+        }
+
+        .hero p {
+            max-width: 720px;
+            font-size: 1.15rem;
+            color: rgba(255,255,255,0.78);
+        }
+
+
+        /* INTRO */
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 75px;
+            align-items: start;
+        }
+
+        .belief {
+            margin-top: 28px;
+            padding-left: 18px;
+            border-left: 3px solid var(--red);
+            color: var(--navy);
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+
+        /* STORY */
+
+        .story-section {
+            background: var(--light);
+        }
+
+        .story-grid {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 70px;
+            align-items: start;
+        }
+
+        .story-copy p + p {
+            margin-top: 20px;
+        }
+
+
+        /* FAITH */
+
+        .faith-section {
+            background: var(--navy);
+            color: var(--white);
+        }
+
+        .faith-section h2 {
+            color: var(--white);
+        }
+
+        .faith-section .section-label {
+            color: #D7A3A7;
+        }
+
+        .faith-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+        }
+
+        .faith-copy {
+            color: rgba(255,255,255,0.72);
+            font-size: 1.05rem;
+        }
+
+        .faith-callout {
+            border: 1px solid rgba(255,255,255,0.15);
+            padding: 30px;
+            background: rgba(255,255,255,0.04);
+        }
+
+        .faith-callout strong {
+            display: block;
+            color: var(--white);
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .faith-callout p {
+            color: rgba(255,255,255,0.68);
+        }
+
+
+        /* VALUES */
+
+        .values-grid {
+            margin-top: 45px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .value {
+            border: 1px solid #E2E8F0;
+            padding: 26px 22px;
+            background: var(--white);
+        }
+
+        .value h3 {
+            color: var(--navy);
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+
+        .value p {
+            font-size: 0.9rem;
+        }
+
+
+        /* INDEPENDENCE */
+
+        .independent-section {
+            background: var(--light);
+        }
+
+        .independent-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+        }
+
+
+        /* VISION */
+
+        .vision-section {
+            background: var(--red);
+            color: var(--white);
+        }
+
+        .vision-section h2 {
+            color: var(--white);
+        }
+
+        .vision-section .section-label {
+            color: rgba(255,255,255,0.72);
+        }
+
+        .vision-section p {
+            color: rgba(255,255,255,0.82);
+            font-size: 1.05rem;
+        }
+
+
+        /* FOUNDERS */
+
+        .founders-grid {
+            margin-top: 45px;
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .founder-card {
+            border: 1px solid #E2E8F0;
+            padding: 32px;
+        }
+
+        .founder-role {
+            color: var(--red);
+            text-transform: uppercase;
+            letter-spacing: 1.4px;
+            font-size: 0.72rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .founder-card h3 {
+            color: var(--navy);
+            font-size: 1.55rem;
+            margin-bottom: 8px;
+        }
+
+        .chapter-role {
+            color: var(--navy);
+            font-weight: 700;
+            margin-bottom: 18px;
+        }
+
+        .founder-card p {
+            font-size: 0.95rem;
+        }
+
+
+        /* FOOTER */
+
+        footer {
+            background: #071527;
+            color: var(--white);
+            padding: 50px 28px 30px;
+        }
+
+        .footer-container {
+            max-width: 1100px;
+            margin: auto;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .footer-brand {
+            font-size: 1rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 20px;
+
+            color: rgba(255,255,255,0.65);
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+        }
+
+        .copyright {
+            max-width: 1100px;
+            margin: 35px auto 0;
+            padding-top: 20px;
+
+            border-top: 1px solid rgba(255,255,255,0.10);
+
+            color: rgba(255,255,255,0.40);
+            font-size: 0.75rem;
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .intro-grid,
+            .story-grid,
+            .faith-grid,
+            .independent-grid,
+            .founders-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            section {
+                padding: 75px 22px;
+            }
+
+            .hero {
+                padding: 95px 22px 85px;
+            }
+        }
+
+        @media (max-width: 520px) {
+
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                letter-spacing: -2px;
+            }
+
+            .footer-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+        <div class="nav-container">
+
+            <a href="index.html" class="logo">
+                CLUB LIBERTY
+            </a>
+
+            <div class="nav-links">
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="index.html#what-we-do">
+                    What We Do
+                </a>
+
+                <a href="index.html#chapters">
+                    Chapters
+                </a>
+
+                <a href="index.html#get-involved">
+                    Get Involved
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- HERO -->
+
+    <header class="hero">
+
+        <div class="hero-inner">
+
+            <div class="section-label">
+                About Club Liberty
+            </div>
+
+            <h1>
+                Leadership means
+                more than having a voice.
+                It means serving.
+            </h1>
+
+            <p>
+
+                Founded in 2026 at California Lutheran University,
+                Club Liberty was created to develop a generation of
+                leaders who believe civic engagement should lead to
+                meaningful action.
+
+            </p>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- WHO WE ARE -->
+
+    <section>
+
+        <div class="container">
+
+            <div class="intro-grid">
+
+                <div>
+
+                    <div class="section-label">
+                        Who We Are
+                    </div>
+
+                    <h2>
+                        We believe leadership is service.
+                    </h2>
+
+                </div>
+
+
+                <div>
+
+                    <p>
+
+                        Club Liberty is an independent civic organization
+                        grounded in freedom, service, conviction, civic
+                        responsibility, and the belief that leadership
+                        carries an obligation to serve others.
+
+                    </p>
+
+                    <br>
+
+                    <p>
+
+                        We bring young people together to engage with
+                        civic life, develop as leaders, exchange ideas,
+                        and translate those principles into direct
+                        service in their communities.
+
+                    </p>
+
+                    <div class="belief">
+                        Civic engagement should not stop at conversation.
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- OUR STORY -->
+
+    <section class="story-section">
+
+        <div class="container">
+
+            <div class="story-grid">
+
+                <div>
+
+                    <div class="section-label">
+                        Our Story
+                    </div>
+
+                    <h2>
+                        From a campus idea
+                        to a larger mission.
+                    </h2>
+
+                </div>
+
+
+                <div class="story-copy">
+
+                    <p>
+
+                        Club Liberty began after an unsuccessful effort
+                        to establish a chapter of another national civic
+                        organization at California Lutheran University.
+                        That experience created an opportunity to think
+                        more deeply about what a civic organization
+                        should actually accomplish.
+
+                    </p>
+
+                    <p>
+
+                        Rather than simply recreating another political
+                        club, the vision began to expand.
+
+                    </p>
+
+                    <p>
+
+                        Founder Tristan Silva returned to an idea that
+                        had shaped him personally: his mother's dream
+                        of creating places where children and families
+                        in Mexico could receive food, care, and hear
+                        the Gospel of Jesus Christ.
+
+                    </p>
+
+                    <p>
+
+                        That dream became part of the foundation for
+                        Club Liberty's broader mission — to connect
+                        civic engagement and leadership with direct
+                        service to people.
+
+                    </p>
+
+                    <p>
+
+                        Club Liberty was founded in 2026 at California
+                        Lutheran University and soon expanded with a
+                        chapter at Azusa Pacific University.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FAITH -->
+
+    <section class="faith-section">
+
+        <div class="container">
+
+            <div class="faith-grid">
+
+                <div>
+
+                    <div class="section-label">
+                        Our Faith
+                    </div>
+
+                    <h2>
+                        Guided by the example
+                        of Jesus Christ.
+                    </h2>
+
+                </div>
+
+
+                <div>
+
+                    <div class="faith-copy">
+
+                        Club Liberty is guided by Christian values and
+                        the teachings and example of Jesus Christ.
+
+                        <br><br>
+
+                        We do not believe faith should be reduced to
+                        slogans. We believe it should shape how we lead,
+                        how we serve, how we treat people, and how we
+                        respond even when we disagree.
+
+                    </div>
+
+
+                    <div class="faith-callout"
+                         style="margin-top: 30px;">
+
+                        <strong>
+                            Is this Christlike?
+                        </strong>
+
+                        <p>
+
+                            That question represents the standard we
+                            strive to bring into our decisions,
+                            relationships, projects, and leadership.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- VALUES -->
+
+    <section>
+
+        <div class="container">
+
+            <div class="section-label">
+                Our Values
+            </div>
+
+            <h2>
+                The principles that guide us.
+            </h2>
+
+
+            <div class="values-grid">
+
+
+                <div class="value">
+                    <h3>Freedom</h3>
+                    <p>
+                        Defending the freedom of people to think,
+                        speak, worship, participate, and pursue
+                        opportunity.
+                    </p>
+                </div>
+
+
+                <div class="value">
+                    <h3>Service</h3>
+                    <p>
+                        Leadership should produce action that
+                        benefits the people and communities around us.
+                    </p>
+                </div>
+
+
+                <div class="value">
+                    <h3>Conviction</h3>
+                    <p>
+                        Standing firmly for principles while treating
+                        others with dignity and respect.
+                    </p>
+                </div>
+
+
+                <div class="value">
+                    <h3>Leadership</h3>
+                    <p>
+                        Developing people willing to take
+                        responsibility rather than wait for others
+                        to act.
+                    </p>
+                </div>
+
+
+                <div class="value">
+                    <h3>Civic Responsibility</h3>
+                    <p>
+                        Citizenship carries responsibilities as well
+                        as rights.
+                    </p>
+                </div>
+
+
+                <div class="value">
+                    <h3>Civil Discourse</h3>
+                    <p>
+                        Difficult ideas should be discussed openly,
+                        thoughtfully, and without dehumanizing those
+                        who disagree.
+                    </p>
+                </div>
+
+
+                <div class="value">
+                    <h3>Human Dignity</h3>
+                    <p>
+                        Every person deserves to be treated as someone
+                        of inherent worth.
+                    </p>
+                </div>
+
+
+                <div class="value">
+                    <h3>Faith</h3>
+                    <p>
+                        Our understanding of service and leadership
+                        is shaped by the teachings and example of
+                        Jesus Christ.
+                    </p>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- INDEPENDENCE -->
+
+    <section class="independent-section">
+
+        <div class="container">
+
+            <div class="independent-grid">
+
+                <div>
+
+                    <div class="section-label">
+                        Independent By Principle
+                    </div>
+
+                    <h2>
+                        Principles before parties.
+                    </h2>
+
+                </div>
+
+
+                <div>
+
+                    <p>
+
+                        Club Liberty is an independent civic organization.
+                        We are not affiliated with or beholden to any
+                        political party.
+
+                    </p>
+
+                    <br>
+
+                    <p>
+
+                        Our worldview is rooted in conservative principles
+                        including freedom, personal responsibility,
+                        strong communities, civic participation, and
+                        respect for human dignity.
+
+                    </p>
+
+                    <br>
+
+                    <p>
+
+                        We believe ideas should be judged on their
+                        principles, their consequences, and whether
+                        they genuinely serve the people affected by them.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- VISION -->
+
+    <section class="vision-section">
+
+        <div class="container">
+
+            <div class="section-label">
+                Our Vision
+            </div>
+
+            <h2>
+                Build leaders.
+                Serve communities.
+                Reach beyond borders.
+            </h2>
+
+            <p>
+
+                Club Liberty's vision extends beyond university campuses.
+                We seek to build a network of chapters that develops
+                young leaders while creating meaningful service projects
+                in the United States and internationally.
+
+                <br><br>
+
+                Our long-term work includes food assistance, shelters,
+                educational initiatives, housing and community projects,
+                and humanitarian efforts serving children and families
+                in need — including communities throughout Latin America.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FOUNDERS -->
+
+    <section>
+
+        <div class="container">
+
+            <div class="section-label">
+                Our Founders
+            </div>
+
+            <h2>
+                Built by students.
+                Driven by service.
+            </h2>
+
+
+            <div class="founders-grid">
+
+
+                <div class="founder-card">
+
+                    <div class="founder-role">
+                        Founder & President
+                    </div>
+
+                    <h3>
+                        Tristan Silva
+                    </h3>
+
+                    <div class="chapter-role">
+                        President, California Lutheran University Chapter
+                    </div>
+
+                    <p>
+
+                        Tristan founded Club Liberty at California
+                        Lutheran University in 2026 and currently
+                        serves as President of both the organization
+                        and its founding chapter.
+
+                        <br><br>
+
+                        His vision for Club Liberty centers on building
+                        young leaders who understand civic life,
+                        stand by their convictions, and put leadership
+                        into practice through service to others.
+
+                    </p>
+
+                </div>
+
+
+                <div class="founder-card">
+
+                    <div class="founder-role">
+                        Co-Founder & Vice President
+                    </div>
+
+                    <h3>
+                        Luke Taylor
+                    </h3>
+
+                    <div class="chapter-role">
+                        President, Azusa Pacific University Chapter
+                    </div>
+
+                    <p>
+
+                        Luke serves as Co-Founder and Vice President
+                        of Club Liberty and leads the organization's
+                        chapter at Azusa Pacific University.
+
+                        <br><br>
+
+                        His leadership helped expand Club Liberty
+                        beyond its founding campus and establish
+                        the organization's growing chapter network.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+                CLUB LIBERTY
+            </div>
+
+            <div class="footer-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="https://www.instagram.com/club.liberty/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Instagram
+                </a>
+
+                <a href="mailto:info@clubliberty.org">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 Club Liberty. All rights reserved.
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
