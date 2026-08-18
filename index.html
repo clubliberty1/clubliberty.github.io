@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Club Liberty | Developing Leaders. Serving Communities. Advancing Liberty.</title>
+    <title>Club Liberty | Leadership Is Service</title>
 
     <meta name="description"
-        content="Club Liberty is a student-led organization developing young leaders through civic engagement, community service, and humanitarian action.">
+        content="Club Liberty is a student-led organization developing young leaders through civic engagement, community service, and meaningful action. We believe leadership is service.">
 
     <style>
+
         :root {
             --navy: #0B1F3A;
             --navy-light: #132E50;
@@ -285,13 +286,24 @@
 
 
         /* ========================================
-           QUOTE
+           LOGO + QUOTE
         ======================================== */
 
         .quote-section {
             background: var(--light);
 
             text-align: center;
+        }
+
+        .quote-logo {
+            width: 190px;
+            max-width: 60%;
+
+            height: auto;
+
+            display: block;
+
+            margin: 0 auto 32px auto;
         }
 
         .quote-stars {
@@ -301,7 +313,7 @@
 
             letter-spacing: 8px;
 
-            margin-bottom: 28px;
+            margin-bottom: 25px;
         }
 
         .quote {
@@ -345,28 +357,90 @@
             max-width: 500px;
         }
 
-        .about-right {
-            display: flex;
-
-            flex-direction: column;
-
-            align-items: flex-start;
-        }
-
-        .about-logo {
-            width: 205px;
-
-            max-width: 100%;
-
-            height: auto;
-
-            margin-bottom: 28px;
-        }
-
         .about-text {
             color: var(--muted);
 
             font-size: 1.05rem;
+        }
+
+        .belief-line {
+            margin-top: 30px;
+
+            padding-left: 18px;
+
+            border-left: 3px solid var(--red);
+
+            color: var(--navy);
+
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+
+        /* ========================================
+           PHILOSOPHY
+        ======================================== */
+
+        .service-section {
+            background: var(--white);
+        }
+
+        .service-grid {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 70px;
+
+            align-items: start;
+        }
+
+        .service-copy {
+            color: var(--muted);
+
+            font-size: 1.05rem;
+        }
+
+        .service-copy strong {
+            color: var(--navy);
+        }
+
+        .service-principles {
+            display: grid;
+
+            gap: 16px;
+
+            margin-top: 34px;
+        }
+
+        .service-principle {
+            padding: 22px 24px;
+
+            border: 1px solid #E2E8F0;
+
+            background: var(--light);
+
+            transition: 0.2s ease;
+        }
+
+        .service-principle:hover {
+            border-color: var(--navy);
+
+            transform: translateY(-2px);
+        }
+
+        .service-principle h3 {
+            color: var(--navy);
+
+            margin-bottom: 6px;
+
+            font-size: 1rem;
+        }
+
+        .service-principle p {
+            color: var(--muted);
+
+            font-size: 0.92rem;
         }
 
 
@@ -513,7 +587,7 @@
         }
 
         .cta p {
-            max-width: 600px;
+            max-width: 650px;
 
             margin: 0 auto 30px;
 
@@ -606,11 +680,13 @@
             }
 
             .about-grid,
+            .service-grid,
             .chapters {
                 grid-template-columns: 1fr;
             }
 
-            .about-grid {
+            .about-grid,
+            .service-grid {
                 gap: 45px;
             }
 
@@ -622,6 +698,10 @@
                 padding: 75px 22px;
 
                 scroll-margin-top: 75px;
+            }
+
+            .quote-logo {
+                width: 165px;
             }
         }
 
@@ -639,8 +719,8 @@
                 padding: 80px 22px;
             }
 
-            .about-logo {
-                width: 170px;
+            .quote-logo {
+                width: 145px;
             }
 
             .footer-container {
@@ -705,7 +785,6 @@
 
         <div class="hero-content">
 
-
             <div class="eyebrow">
                 Student-led civic engagement
             </div>
@@ -726,15 +805,13 @@
 
             <p>
 
-                Club Liberty is a student-led organization
-                empowering young people to turn civic engagement
-                into meaningful service and action.
+                Club Liberty empowers young people to lead with purpose,
+                engage in civic life, and serve the communities around them.
 
             </p>
 
 
             <div class="buttons">
-
 
                 <a
                     href="#get-involved"
@@ -753,7 +830,6 @@
 
                 </a>
 
-
             </div>
 
         </div>
@@ -763,12 +839,18 @@
 
 
     <!-- ========================================
-         QUOTE
+         LOGO + MICHAEL JACKSON QUOTE
     ======================================== -->
 
     <section class="quote-section">
 
         <div class="container">
+
+
+            <img
+                src="club-liberty-logo.png"
+                alt="Club Liberty"
+                class="quote-logo">
 
 
             <div class="quote-stars">
@@ -788,7 +870,6 @@
                 — Michael Jackson
             </div>
 
-
         </div>
 
     </section>
@@ -803,12 +884,10 @@
 
         <div class="container">
 
-
             <div class="about-grid">
 
 
                 <div class="about-left">
-
 
                     <div class="section-label">
                         Who We Are
@@ -822,29 +901,84 @@
 
                     </h2>
 
+                </div>
+
+
+                <div class="about-text">
+
+                    <p>
+
+                        Club Liberty is a student-led organization focused
+                        on developing young leaders through civic engagement,
+                        community service, and meaningful action.
+
+                    </p>
+
+
+                    <br>
+
+
+                    <p>
+
+                        We believe civic engagement should be more than
+                        discussion. Leadership means taking responsibility,
+                        showing up, and serving people directly.
+
+                    </p>
+
+
+                    <div class="belief-line">
+                        We believe leadership is service.
+                    </div>
 
                 </div>
 
 
+            </div>
 
-                <div class="about-right">
+        </div>
 
-
-                    <img
-                        src="club-liberty-logo.png"
-                        alt="Club Liberty"
-                        class="about-logo">
+    </section>
 
 
-                    <div class="about-text">
 
+    <!-- ========================================
+         OUR PHILOSOPHY
+    ======================================== -->
+
+    <section class="service-section">
+
+        <div class="container">
+
+            <div class="service-grid">
+
+
+                <div>
+
+                    <div class="section-label">
+                        Our Philosophy
+                    </div>
+
+
+                    <h2>
+
+                        Public service should
+                        actually serve people.
+
+                    </h2>
+
+                </div>
+
+
+                <div>
+
+                    <div class="service-copy">
 
                         <p>
 
-                            Club Liberty is a student-led organization
-                            focused on developing young leaders through
-                            civic engagement, community service, and
-                            meaningful action.
+                            Politics and civic engagement matter because
+                            decisions affect real people. For us,
+                            participation is only the beginning.
 
                         </p>
 
@@ -854,19 +988,77 @@
 
                         <p>
 
-                            Through university chapters and community
-                            initiatives, we create opportunities for
-                            students to lead, serve, and contribute to
-                            the communities around them.
+                            <strong>
+                                Club Liberty exists to connect leadership
+                                with service.
+                            </strong>
+
+                            We want young people to learn about civic life,
+                            develop the confidence to lead, and then put
+                            those values into practice by improving the
+                            communities around them.
 
                         </p>
-
 
                     </div>
 
 
-                </div>
+                    <div class="service-principles">
 
+
+                        <div class="service-principle">
+
+                            <h3>
+                                Learn
+                            </h3>
+
+                            <p>
+
+                                Understand civic life, public issues,
+                                institutions, and the responsibilities
+                                of citizenship.
+
+                            </p>
+
+                        </div>
+
+
+                        <div class="service-principle">
+
+                            <h3>
+                                Lead
+                            </h3>
+
+                            <p>
+
+                                Develop the confidence, judgment,
+                                discipline, and skills to take
+                                responsibility.
+
+                            </p>
+
+                        </div>
+
+
+                        <div class="service-principle">
+
+                            <h3>
+                                Serve
+                            </h3>
+
+                            <p>
+
+                                Put principles into practice through
+                                community service and meaningful action.
+
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
 
             </div>
 
@@ -918,9 +1110,8 @@
 
                     <p>
 
-                        Encouraging students to understand,
-                        participate in, and contribute to
-                        their communities.
+                        Giving students opportunities to understand,
+                        participate in, and contribute to civic life.
 
                     </p>
 
@@ -943,9 +1134,8 @@
 
                     <p>
 
-                        Developing young leaders through
-                        responsibility, organization,
-                        service, and action.
+                        Developing young leaders through responsibility,
+                        organization, service, and real-world action.
 
                     </p>
 
@@ -968,9 +1158,8 @@
 
                     <p>
 
-                        Turning civic engagement into
-                        tangible service that strengthens
-                        communities.
+                        Turning civic engagement into direct service
+                        that strengthens local communities.
 
                     </p>
 
@@ -993,9 +1182,8 @@
 
                     <p>
 
-                        Supporting communities through
-                        projects focused on essential needs
-                        and human dignity.
+                        Supporting communities through projects focused
+                        on essential needs, opportunity, and human dignity.
 
                     </p>
 
@@ -1049,7 +1237,11 @@
 
 
                     <p>
-                        The founding chapter of Club Liberty.
+
+                        The founding chapter of Club Liberty,
+                        bringing civic engagement, leadership,
+                        and service together on campus.
+
                     </p>
 
 
@@ -1072,8 +1264,9 @@
 
                     <p>
 
-                        Expanding Club Liberty's student-led
-                        mission across Southern California.
+                        Expanding Club Liberty's mission through
+                        student leadership and community involvement
+                        in Southern California.
 
                     </p>
 
@@ -1117,14 +1310,13 @@
             <p>
 
                 Join a chapter, start one at your university,
-                volunteer with a project, or partner with
-                Club Liberty.
+                volunteer with a project, or partner with Club Liberty.
+                Leadership begins when you decide to serve.
 
             </p>
 
 
             <div class="buttons">
-
 
                 <a
                     href="mailto:info@clubliberty.org"
@@ -1133,7 +1325,6 @@
                     Contact Us
 
                 </a>
-
 
             </div>
 
@@ -1183,7 +1374,6 @@
 
 
             </div>
-
 
         </div>
 
