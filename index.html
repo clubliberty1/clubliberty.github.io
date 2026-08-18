@@ -14,10 +14,6 @@
 
     <style>
 
-        /* ========================================
-           BRAND COLORS
-        ======================================== */
-
         :root {
             --navy: #0B1F3A;
             --navy-light: #132E50;
@@ -35,11 +31,6 @@
 
             --border: #E2E8F0;
         }
-
-
-        /* ========================================
-           RESET
-        ======================================== */
 
         * {
             margin: 0;
@@ -88,9 +79,6 @@
 
         section {
             padding: 95px 28px;
-
-            /* prevents sticky navigation from
-               covering anchor-linked sections */
             scroll-margin-top: 85px;
         }
 
@@ -623,7 +611,7 @@
 
 
         /* ========================================
-           CHAPTERS
+           CHAPTER PREVIEW
         ======================================== */
 
         .chapters-grid {
@@ -678,6 +666,21 @@
             color: var(--muted);
 
             font-size: 0.9rem;
+        }
+
+        .chapters-link {
+            display: inline-block;
+
+            margin-top: 30px;
+
+            color: var(--red);
+
+            font-size: 0.92rem;
+            font-weight: 700;
+        }
+
+        .chapters-link:hover {
+            text-decoration: underline;
         }
 
 
@@ -866,10 +869,6 @@
 
     <!-- ========================================
          NAVIGATION
-
-         IMPORTANT:
-         About and What We Do are REAL pages.
-         They do NOT point to homepage anchors.
     ======================================== -->
 
     <nav>
@@ -886,22 +885,18 @@
 
             <div class="nav-links">
 
-                <!-- DIRECT PAGE LINK -->
                 <a href="./about.html">
                     About
                 </a>
 
-                <!-- DIRECT PAGE LINK -->
                 <a href="./what-we-do.html">
                     What We Do
                 </a>
 
-                <!-- HOMEPAGE ANCHOR -->
-                <a href="#chapters">
+                <a href="./chapters.html">
                     Chapters
                 </a>
 
-                <!-- HOMEPAGE ANCHOR -->
                 <a href="#get-involved">
                     Get Involved
                 </a>
@@ -959,7 +954,7 @@
                 </a>
 
 
-                <a href="#chapters"
+                <a href="./chapters.html"
                    class="button button-secondary">
 
                     Our Chapters
@@ -1013,11 +1008,6 @@
 
     <!-- ========================================
          WHO WE ARE PREVIEW
-
-         Notice:
-         This section does NOT have id="about".
-         That prevents any accidental #about
-         navigation on the homepage.
     ======================================== -->
 
     <section>
@@ -1214,14 +1204,6 @@
 
     <!-- ========================================
          WHAT WE DO PREVIEW
-
-         Notice:
-         This section does NOT have id="what-we-do".
-         That completely eliminates the old
-         #what-we-do scrolling destination.
-
-         The navbar can therefore ONLY open
-         what-we-do.html.
     ======================================== -->
 
     <section class="what-preview">
@@ -1330,8 +1312,6 @@
             </div>
 
 
-            <!-- DIRECT PAGE LINK -->
-
             <a href="./what-we-do.html"
                class="what-link">
 
@@ -1346,13 +1326,10 @@
 
 
     <!-- ========================================
-         CHAPTERS
-
-         This DOES have an ID because we currently
-         want the navbar to scroll here.
+         CHAPTERS PREVIEW
     ======================================== -->
 
-    <section id="chapters">
+    <section>
 
         <div class="container">
 
@@ -1384,8 +1361,8 @@
                     <p>
 
                         The founding chapter of Club Liberty,
-                        bringing civic engagement, leadership,
-                        and service together on campus.
+                        led by Tristan Silva and focused on
+                        civic engagement, leadership, and service.
 
                     </p>
 
@@ -1404,15 +1381,23 @@
 
                     <p>
 
-                        Expanding Club Liberty's mission
-                        through student leadership and
-                        community involvement in Southern California.
+                        Club Liberty's first expansion chapter,
+                        led by Luke Taylor and helping grow the
+                        organization across Southern California.
 
                     </p>
 
                 </div>
 
             </div>
+
+
+            <a href="./chapters.html"
+               class="chapters-link">
+
+                Explore our chapters →
+
+            </a>
 
         </div>
 
@@ -1492,6 +1477,10 @@
 
                 <a href="./what-we-do.html">
                     What We Do
+                </a>
+
+                <a href="./chapters.html">
+                    Chapters
                 </a>
 
                 <a
