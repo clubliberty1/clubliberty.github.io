@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Get Involved | Club Liberty</title>
+
+    <meta name="description"
+          content="Join Club Liberty, start a chapter, volunteer, or partner with us. Leadership begins when you decide to serve.">
+
+    <style>
+
+        :root {
+            --navy: #0B1F3A;
+            --navy-light: #132E50;
+            --navy-dark: #071527;
+
+            --white: #FFFFFF;
+
+            --red: #8F2D35;
+            --red-light: #D7A3A7;
+
+            --light: #F5F7FA;
+
+            --text: #172235;
+            --muted: #64748B;
+
+            --border: #E2E8F0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Helvetica,
+                Arial,
+                sans-serif;
+
+            background: var(--white);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        section {
+            padding: 90px 28px;
+        }
+
+        .section-label {
+            color: var(--red);
+
+            text-transform: uppercase;
+
+            letter-spacing: 2px;
+
+            font-size: 0.75rem;
+            font-weight: 800;
+
+            margin-bottom: 14px;
+        }
+
+        h2 {
+            color: var(--navy);
+
+            font-size: clamp(2rem, 5vw, 3.4rem);
+
+            line-height: 1.05;
+
+            margin-bottom: 20px;
+        }
+
+
+        /* ========================================
+           NAVIGATION
+        ======================================== */
+
+        nav {
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+
+            background: rgba(11, 31, 58, 0.97);
+
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+
+            border-bottom:
+                1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+
+            margin: 0 auto;
+
+            padding: 18px 28px;
+
+            display: flex;
+
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            color: var(--white);
+
+            font-size: 1.15rem;
+            font-weight: 800;
+
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+
+            align-items: center;
+
+            gap: 28px;
+
+            color: rgba(255, 255, 255, 0.84);
+
+            font-size: 0.9rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--white);
+        }
+
+
+        /* ========================================
+           HERO
+        ======================================== */
+
+        .hero {
+            background:
+                radial-gradient(
+                    circle at 85% 20%,
+                    rgba(143, 45, 53, 0.17),
+                    transparent 28%
+                ),
+                linear-gradient(
+                    135deg,
+                    var(--navy-dark) 0%,
+                    var(--navy) 55%,
+                    #102C4D 100%
+                );
+
+            color: var(--white);
+
+            padding: 120px 28px 105px;
+        }
+
+        .hero-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .hero .section-label {
+            color: var(--red-light);
+        }
+
+        .hero h1 {
+            max-width: 850px;
+
+            color: var(--white);
+
+            font-size: clamp(3rem, 8vw, 5.8rem);
+
+            line-height: 0.98;
+
+            letter-spacing: -3px;
+
+            margin-bottom: 26px;
+        }
+
+        .hero p {
+            max-width: 680px;
+
+            color: rgba(255, 255, 255, 0.76);
+
+            font-size: 1.15rem;
+        }
+
+
+        /* ========================================
+           ACTION CARDS
+        ======================================== */
+
+        .actions-section {
+            background: var(--light);
+        }
+
+        .actions-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 20px;
+
+            margin-top: 42px;
+        }
+
+        .action-card {
+            background: var(--white);
+
+            border: 1px solid var(--border);
+
+            padding: 32px;
+
+            transition:
+                transform 0.2s ease,
+                border-color 0.2s ease;
+        }
+
+        .action-card:hover {
+            transform: translateY(-3px);
+
+            border-color: var(--navy);
+        }
+
+        .action-number {
+            color: var(--red);
+
+            font-size: 0.75rem;
+            font-weight: 800;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 18px;
+        }
+
+        .action-card h3 {
+            color: var(--navy);
+
+            font-size: 1.35rem;
+
+            margin-bottom: 10px;
+        }
+
+        .action-card p {
+            color: var(--muted);
+
+            font-size: 0.95rem;
+
+            margin-bottom: 22px;
+        }
+
+        .action-link {
+            display: inline-block;
+
+            color: var(--red);
+
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+
+        .action-link:hover {
+            text-decoration: underline;
+        }
+
+
+        /* ========================================
+           CONTACT
+        ======================================== */
+
+        .contact-section {
+            text-align: center;
+        }
+
+        .contact-section p {
+            max-width: 650px;
+
+            margin: 0 auto 28px;
+
+            color: var(--muted);
+
+            font-size: 1.05rem;
+        }
+
+        .contact-buttons {
+            display: flex;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 14px;
+        }
+
+        .button {
+            display: inline-block;
+
+            padding: 13px 24px;
+
+            border-radius: 4px;
+
+            font-size: 0.9rem;
+            font-weight: 700;
+
+            transition:
+                transform 0.2s ease,
+                background 0.2s ease,
+                color 0.2s ease;
+        }
+
+        .button-primary {
+            background: var(--red);
+            color: var(--white);
+        }
+
+        .button-primary:hover {
+            transform: translateY(-2px);
+        }
+
+        .button-secondary {
+            color: var(--navy);
+
+            border: 1px solid var(--navy);
+        }
+
+        .button-secondary:hover {
+            background: var(--navy);
+            color: var(--white);
+        }
+
+
+        /* ========================================
+           FINAL CTA
+        ======================================== */
+
+        .final-cta {
+            background: var(--red);
+
+            color: var(--white);
+
+            text-align: center;
+        }
+
+        .final-cta .section-label {
+            color: rgba(255, 255, 255, 0.72);
+        }
+
+        .final-cta h2 {
+            color: var(--white);
+        }
+
+        .final-cta p {
+            max-width: 650px;
+
+            margin: 0 auto;
+
+            color: rgba(255, 255, 255, 0.82);
+
+            font-size: 1.05rem;
+        }
+
+
+        /* ========================================
+           FOOTER
+        ======================================== */
+
+        footer {
+            background: var(--navy-dark);
+
+            color: var(--white);
+
+            padding: 50px 28px 30px;
+        }
+
+        .footer-container {
+            max-width: 1100px;
+
+            margin: 0 auto;
+
+            display: flex;
+
+            justify-content: space-between;
+            align-items: center;
+
+            gap: 30px;
+
+            flex-wrap: wrap;
+        }
+
+        .footer-brand {
+            color: var(--white);
+
+            font-size: 1rem;
+            font-weight: 800;
+
+            letter-spacing: 2px;
+        }
+
+        .footer-links {
+            display: flex;
+
+            gap: 20px;
+
+            color:
+                rgba(255, 255, 255, 0.65);
+
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+        }
+
+        .copyright {
+            max-width: 1100px;
+
+            margin:
+                35px auto 0;
+
+            padding-top: 20px;
+
+            border-top:
+                1px solid rgba(255, 255, 255, 0.10);
+
+            color:
+                rgba(255, 255, 255, 0.40);
+
+            font-size: 0.75rem;
+        }
+
+
+        /* ========================================
+           MOBILE
+        ======================================== */
+
+        @media (max-width: 800px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .actions-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 75px 22px;
+            }
+
+            .hero {
+                padding: 95px 22px 85px;
+            }
+        }
+
+        @media (max-width: 520px) {
+
+            .hero h1 {
+                letter-spacing: -2px;
+            }
+
+            .footer-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ========================================
+         NAVIGATION
+    ======================================== -->
+
+    <nav>
+
+        <div class="nav-container">
+
+            <a href="./index.html"
+               class="brand">
+
+                CLUB LIBERTY
+
+            </a>
+
+
+            <div class="nav-links">
+
+                <a href="./about.html">
+                    About
+                </a>
+
+                <a href="./what-we-do.html">
+                    What We Do
+                </a>
+
+                <a href="./chapters.html">
+                    Chapters
+                </a>
+
+                <a href="./get-involved.html">
+                    Get Involved
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ========================================
+         HERO
+    ======================================== -->
+
+    <header class="hero">
+
+        <div class="hero-inner">
+
+            <div class="section-label">
+                Get Involved
+            </div>
+
+
+            <h1>
+
+                Find your place
+                in the mission.
+
+            </h1>
+
+
+            <p>
+
+                Whether you want to join a chapter,
+                build one on your campus, volunteer,
+                or work alongside Club Liberty,
+                there is a way to get involved.
+
+            </p>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ========================================
+         WAYS TO GET INVOLVED
+    ======================================== -->
+
+    <section class="actions-section">
+
+        <div class="container">
+
+            <div class="section-label">
+                Take Action
+            </div>
+
+
+            <h2>
+
+                Choose how you
+                want to get involved.
+
+            </h2>
+
+
+            <div class="actions-grid">
+
+
+                <!-- JOIN -->
+
+                <div class="action-card">
+
+                    <div class="action-number">
+                        01
+                    </div>
+
+                    <h3>
+                        Join a Chapter
+                    </h3>
+
+                    <p>
+
+                        Connect with an existing Club Liberty
+                        chapter and become part of your local
+                        campus community.
+
+                    </p>
+
+                    <a
+                        href="./chapters.html"
+                        class="action-link">
+
+                        Explore our chapters →
+
+                    </a>
+
+                </div>
+
+
+                <!-- START -->
+
+                <div class="action-card">
+
+                    <div class="action-number">
+                        02
+                    </div>
+
+                    <h3>
+                        Start a Chapter
+                    </h3>
+
+                    <p>
+
+                        Bring Club Liberty to your university
+                        and help build a new community of
+                        student leaders.
+
+                    </p>
+
+                    <a
+                        href="mailto:clublibertyofficial@gmail.com?subject=Start%20a%20Club%20Liberty%20Chapter"
+                        class="action-link">
+
+                        Start a chapter →
+
+                    </a>
+
+                </div>
+
+
+                <!-- VOLUNTEER -->
+
+                <div class="action-card">
+
+                    <div class="action-number">
+                        03
+                    </div>
+
+                    <h3>
+                        Volunteer
+                    </h3>
+
+                    <p>
+
+                        Help with service projects,
+                        events, outreach, and initiatives
+                        that directly support communities.
+
+                    </p>
+
+                    <a
+                        href="mailto:clublibertyofficial@gmail.com?subject=Club%20Liberty%20Volunteer"
+                        class="action-link">
+
+                        Volunteer with us →
+
+                    </a>
+
+                </div>
+
+
+                <!-- PARTNER -->
+
+                <div class="action-card">
+
+                    <div class="action-number">
+                        04
+                    </div>
+
+                    <h3>
+                        Partner With Us
+                    </h3>
+
+                    <p>
+
+                        Organizations, community groups,
+                        nonprofits, and campus partners
+                        can work with Club Liberty on
+                        events and service projects.
+
+                    </p>
+
+                    <a
+                        href="mailto:clublibertyofficial@gmail.com?subject=Club%20Liberty%20Partnership"
+                        class="action-link">
+
+                        Partner with us →
+
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ========================================
+         CONTACT
+    ======================================== -->
+
+    <section class="contact-section">
+
+        <div class="container">
+
+            <div class="section-label">
+                Contact
+            </div>
+
+
+            <h2>
+
+                Have a question?
+
+            </h2>
+
+
+            <p>
+
+                Reach out to Club Liberty directly
+                for chapter questions, partnerships,
+                volunteering, or general inquiries.
+
+            </p>
+
+
+            <div class="contact-buttons">
+
+                <a
+                    href="mailto:clublibertyofficial@gmail.com"
+                    class="button button-primary">
+
+                    Email Club Liberty
+
+                </a>
+
+
+                <a
+                    href="https://www.instagram.com/club.liberty/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button button-secondary">
+
+                    @club.liberty
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ========================================
+         FINAL CTA
+    ======================================== -->
+
+    <section class="final-cta">
+
+        <div class="container">
+
+            <div class="section-label">
+                Leadership Is Service
+            </div>
+
+
+            <h2>
+
+                Don't just care.
+                Get involved.
+
+            </h2>
+
+
+            <p>
+
+                Leadership begins when you decide
+                to take responsibility, serve others,
+                and turn your convictions into action.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ========================================
+         FOOTER
+    ======================================== -->
+
+    <footer>
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+                CLUB LIBERTY
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="./index.html">
+                    Home
+                </a>
+
+                <a href="./about.html">
+                    About
+                </a>
+
+                <a href="./what-we-do.html">
+                    What We Do
+                </a>
+
+                <a href="./chapters.html">
+                    Chapters
+                </a>
+
+                <a
+                    href="https://www.instagram.com/club.liberty/"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    Instagram
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 Club Liberty. All rights reserved.
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
