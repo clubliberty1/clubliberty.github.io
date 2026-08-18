@@ -1,0 +1,1519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>What We Do | Club Liberty</title>
+
+    <meta name="description"
+        content="Club Liberty develops young leaders through civic engagement, leadership training, community service, and humanitarian action.">
+
+    <style>
+
+        :root {
+            --navy: #0B1F3A;
+            --navy-light: #132E50;
+            --white: #FFFFFF;
+            --red: #8F2D35;
+            --light: #F5F7FA;
+            --text: #172235;
+            --muted: #64748B;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                Roboto, Helvetica, Arial, sans-serif;
+
+            color: var(--text);
+            background: var(--white);
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 95px 28px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .section-label {
+            color: var(--red);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            margin-bottom: 14px;
+        }
+
+        h2 {
+            color: var(--navy);
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            line-height: 1.05;
+            margin-bottom: 22px;
+        }
+
+        p {
+            color: var(--muted);
+        }
+
+
+        /* ========================================
+           NAVIGATION
+        ======================================== */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background: rgba(11, 31, 58, 0.97);
+            backdrop-filter: blur(10px);
+
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 18px 28px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: var(--white);
+            font-size: 1.15rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            color: rgba(255,255,255,0.85);
+            font-size: 0.9rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--white);
+        }
+
+
+        /* ========================================
+           HERO
+        ======================================== */
+
+        .hero {
+            background:
+                radial-gradient(
+                    circle at 85% 20%,
+                    rgba(143,45,53,0.17),
+                    transparent 28%
+                ),
+                linear-gradient(
+                    135deg,
+                    #071527 0%,
+                    #0B1F3A 55%,
+                    #102C4D 100%
+                );
+
+            color: var(--white);
+            padding: 120px 28px 110px;
+        }
+
+        .hero-inner {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .hero .section-label {
+            color: #D7A3A7;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 8vw, 6rem);
+            line-height: 0.98;
+            letter-spacing: -3px;
+            max-width: 950px;
+            margin-bottom: 28px;
+        }
+
+        .hero p {
+            max-width: 760px;
+            font-size: 1.15rem;
+            color: rgba(255,255,255,0.78);
+        }
+
+
+        /* ========================================
+           LEARN LEAD SERVE
+        ======================================== */
+
+        .framework-section {
+            background: var(--white);
+        }
+
+        .framework-intro {
+            max-width: 700px;
+            margin-bottom: 45px;
+        }
+
+        .framework-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .framework-card {
+            border: 1px solid #E2E8F0;
+            padding: 32px 28px;
+            background: var(--light);
+        }
+
+        .framework-number {
+            color: var(--red);
+            font-size: 0.72rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            margin-bottom: 18px;
+        }
+
+        .framework-card h3 {
+            color: var(--navy);
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+        }
+
+        .framework-card p {
+            font-size: 0.95rem;
+        }
+
+
+        /* ========================================
+           CIVIC ENGAGEMENT
+        ======================================== */
+
+        .civic-section {
+            background: var(--navy);
+            color: var(--white);
+        }
+
+        .civic-section h2 {
+            color: var(--white);
+        }
+
+        .civic-section .section-label {
+            color: #D7A3A7;
+        }
+
+        .civic-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 70px;
+            align-items: start;
+        }
+
+        .civic-copy {
+            color: rgba(255,255,255,0.72);
+            font-size: 1.05rem;
+        }
+
+        .activity-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .activity {
+            border: 1px solid rgba(255,255,255,0.14);
+            padding: 24px;
+            background: rgba(255,255,255,0.04);
+        }
+
+        .activity h3 {
+            margin-bottom: 8px;
+            color: var(--white);
+            font-size: 1rem;
+        }
+
+        .activity p {
+            color: rgba(255,255,255,0.62);
+            font-size: 0.9rem;
+        }
+
+
+        /* ========================================
+           LEADERSHIP DEVELOPMENT
+        ======================================== */
+
+        .leadership-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: start;
+        }
+
+        .leadership-list {
+            display: grid;
+            gap: 16px;
+        }
+
+        .leadership-item {
+            border-left: 3px solid var(--red);
+            padding: 4px 0 4px 20px;
+        }
+
+        .leadership-item h3 {
+            color: var(--navy);
+            margin-bottom: 4px;
+            font-size: 1rem;
+        }
+
+        .leadership-item p {
+            font-size: 0.92rem;
+        }
+
+
+        /* ========================================
+           SERVICE IN AMERICA
+        ======================================== */
+
+        .service-section {
+            background: var(--light);
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 70px;
+            align-items: start;
+        }
+
+        .service-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .service-card {
+            background: var(--white);
+            border: 1px solid #E2E8F0;
+            padding: 26px 24px;
+        }
+
+        .service-card h3 {
+            color: var(--navy);
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+
+        .service-card p {
+            font-size: 0.9rem;
+        }
+
+
+        /* ========================================
+           PRACTICE WHAT YOU DEFEND
+        ======================================== */
+
+        .conviction-section {
+            background: var(--white);
+        }
+
+        .conviction-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .conviction-quote {
+            padding: 32px;
+            background: var(--navy);
+            color: var(--white);
+        }
+
+        .conviction-quote strong {
+            display: block;
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+        }
+
+        .conviction-quote p {
+            color: rgba(255,255,255,0.72);
+        }
+
+
+        /* ========================================
+           HUMANITARIAN
+        ======================================== */
+
+        .humanitarian-section {
+            background: var(--red);
+            color: var(--white);
+        }
+
+        .humanitarian-section h2 {
+            color: var(--white);
+        }
+
+        .humanitarian-section .section-label {
+            color: rgba(255,255,255,0.7);
+        }
+
+        .humanitarian-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 70px;
+        }
+
+        .humanitarian-copy p {
+            color: rgba(255,255,255,0.82);
+            font-size: 1.05rem;
+        }
+
+        .humanitarian-list {
+            display: grid;
+            gap: 14px;
+        }
+
+        .humanitarian-item {
+            border: 1px solid rgba(255,255,255,0.22);
+            padding: 20px 22px;
+            background: rgba(255,255,255,0.06);
+        }
+
+        .humanitarian-item h3 {
+            color: var(--white);
+            margin-bottom: 5px;
+            font-size: 1rem;
+        }
+
+        .humanitarian-item p {
+            color: rgba(255,255,255,0.72);
+            font-size: 0.9rem;
+        }
+
+
+        /* ========================================
+           FAITH IN ACTION
+        ======================================== */
+
+        .faith-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+        }
+
+        .faith-callout {
+            background: var(--light);
+            border: 1px solid #E2E8F0;
+            padding: 30px;
+        }
+
+        .faith-callout strong {
+            color: var(--navy);
+            display: block;
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+        }
+
+
+        /* ========================================
+           INDEPENDENT ENGAGEMENT
+        ======================================== */
+
+        .independent-section {
+            background: var(--navy);
+            color: var(--white);
+        }
+
+        .independent-section h2 {
+            color: var(--white);
+        }
+
+        .independent-section .section-label {
+            color: #D7A3A7;
+        }
+
+        .independent-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+        }
+
+        .independent-copy {
+            color: rgba(255,255,255,0.72);
+            font-size: 1.05rem;
+        }
+
+        .independent-callout {
+            border: 1px solid rgba(255,255,255,0.14);
+            padding: 30px;
+            background: rgba(255,255,255,0.04);
+        }
+
+        .independent-callout strong {
+            display: block;
+            color: var(--white);
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .independent-callout p {
+            color: rgba(255,255,255,0.68);
+        }
+
+
+        /* ========================================
+           CTA
+        ======================================== */
+
+        .cta {
+            text-align: center;
+        }
+
+        .cta p {
+            max-width: 650px;
+            margin: 0 auto 28px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 13px 24px;
+            background: var(--red);
+            color: var(--white);
+            font-weight: 700;
+            font-size: 0.9rem;
+            border-radius: 4px;
+            transition: 0.2s ease;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+        }
+
+
+        /* ========================================
+           FOOTER
+        ======================================== */
+
+        footer {
+            background: #071527;
+            color: var(--white);
+            padding: 50px 28px 30px;
+        }
+
+        .footer-container {
+            max-width: 1100px;
+            margin: auto;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .footer-brand {
+            font-size: 1rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 20px;
+            color: rgba(255,255,255,0.65);
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+        }
+
+        .copyright {
+            max-width: 1100px;
+            margin: 35px auto 0;
+            padding-top: 20px;
+
+            border-top: 1px solid rgba(255,255,255,0.10);
+
+            color: rgba(255,255,255,0.40);
+            font-size: 0.75rem;
+        }
+
+
+        /* ========================================
+           MOBILE
+        ======================================== */
+
+        @media (max-width: 800px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .framework-grid,
+            .civic-grid,
+            .leadership-grid,
+            .service-grid,
+            .conviction-grid,
+            .humanitarian-grid,
+            .faith-grid,
+            .independent-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .activity-grid,
+            .service-cards {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 75px 22px;
+            }
+
+            .hero {
+                padding: 95px 22px 85px;
+            }
+        }
+
+        @media (max-width: 520px) {
+
+            .hero h1 {
+                letter-spacing: -2px;
+            }
+
+            .footer-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+        <div class="nav-container">
+
+            <a href="index.html" class="logo">
+                CLUB LIBERTY
+            </a>
+
+            <div class="nav-links">
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="what-we-do.html">
+                    What We Do
+                </a>
+
+                <a href="index.html#chapters">
+                    Chapters
+                </a>
+
+                <a href="index.html#get-involved">
+                    Get Involved
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- HERO -->
+
+    <header class="hero">
+
+        <div class="hero-inner">
+
+            <div class="section-label">
+                What We Do
+            </div>
+
+            <h1>
+                Learn.
+                Lead.
+                Serve.
+            </h1>
+
+            <p>
+
+                Club Liberty exists to turn civic engagement into
+                meaningful action. We help young people understand the
+                issues shaping their communities, develop the skills to
+                lead, and then put those principles into practice through
+                service.
+
+            </p>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- FRAMEWORK -->
+
+    <section class="framework-section">
+
+        <div class="container">
+
+            <div class="section-label">
+                Our Model
+            </div>
+
+            <h2>
+                Civic engagement should lead somewhere.
+            </h2>
+
+            <div class="framework-intro">
+
+                <p>
+
+                    We believe strong communities need informed citizens,
+                    capable leaders, and people willing to serve.
+                    Club Liberty brings those three responsibilities together.
+
+                </p>
+
+            </div>
+
+
+            <div class="framework-grid">
+
+
+                <div class="framework-card">
+
+                    <div class="framework-number">
+                        01
+                    </div>
+
+                    <h3>
+                        Learn
+                    </h3>
+
+                    <p>
+
+                        Understand civic institutions, public issues,
+                        competing ideas, and the responsibilities that
+                        come with citizenship.
+
+                    </p>
+
+                </div>
+
+
+                <div class="framework-card">
+
+                    <div class="framework-number">
+                        02
+                    </div>
+
+                    <h3>
+                        Lead
+                    </h3>
+
+                    <p>
+
+                        Develop the confidence, judgment, organization,
+                        and practical skills necessary to take responsibility
+                        and lead others well.
+
+                    </p>
+
+                </div>
+
+
+                <div class="framework-card">
+
+                    <div class="framework-number">
+                        03
+                    </div>
+
+                    <h3>
+                        Serve
+                    </h3>
+
+                    <p>
+
+                        Turn conviction into action by serving real people,
+                        strengthening communities, and responding to practical
+                        needs.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- CIVIC ENGAGEMENT -->
+
+    <section class="civic-section">
+
+        <div class="container">
+
+            <div class="civic-grid">
+
+
+                <div>
+
+                    <div class="section-label">
+                        Civic Engagement
+                    </div>
+
+                    <h2>
+                        Learn to think.
+                        Learn to participate.
+                    </h2>
+
+                    <div class="civic-copy">
+
+                        Club Liberty chapters create opportunities for students
+                        to engage seriously with public life.
+
+                        <br><br>
+
+                        Debate matters to us because strong convictions should
+                        be tested, defended, challenged, and refined.
+                        But civic engagement goes beyond debate.
+
+                    </div>
+
+                </div>
+
+
+                <div class="activity-grid">
+
+
+                    <div class="activity">
+
+                        <h3>
+                            Debates
+                        </h3>
+
+                        <p>
+
+                            Structured conversations where students engage
+                            difficult issues, defend ideas, and learn to
+                            understand opposing arguments.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="activity">
+
+                        <h3>
+                            Guest Speakers
+                        </h3>
+
+                        <p>
+
+                            Events that bring experienced voices in public
+                            service, law, policy, faith, business, and civic
+                            life directly to students.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="activity">
+
+                        <h3>
+                            Voter Registration
+                        </h3>
+
+                        <p>
+
+                            Nonpartisan efforts encouraging eligible students
+                            to register, participate, and take their civic
+                            responsibilities seriously.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="activity">
+
+                        <h3>
+                            Volunteer Work
+                        </h3>
+
+                        <p>
+
+                            Civic engagement should connect students to the
+                            actual needs of the communities around them.
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- LEADERSHIP -->
+
+    <section>
+
+        <div class="container">
+
+            <div class="leadership-grid">
+
+
+                <div>
+
+                    <div class="section-label">
+                        Leadership Development
+                    </div>
+
+                    <h2>
+                        Give students responsibility.
+                    </h2>
+
+                    <p>
+
+                        Club Liberty chapters are not designed to simply follow
+                        instructions from above. We want chapter leaders to
+                        understand the mission, develop their own leadership
+                        ability, and take meaningful responsibility for the
+                        communities they lead.
+
+                    </p>
+
+                </div>
+
+
+                <div class="leadership-list">
+
+
+                    <div class="leadership-item">
+
+                        <h3>
+                            Chapter Leadership
+                        </h3>
+
+                        <p>
+
+                            Train chapter presidents and leadership teams to
+                            organize meetings, events, service projects, and
+                            campus initiatives effectively.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="leadership-item">
+
+                        <h3>
+                            Local Ownership
+                        </h3>
+
+                        <p>
+
+                            Chapters operate within Club Liberty's mission and
+                            values while retaining room to respond to the
+                            needs and culture of their own campuses.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="leadership-item">
+
+                        <h3>
+                            Fundraising
+                        </h3>
+
+                        <p>
+
+                            Teach chapter leaders how to raise support for
+                            local chapter activities while contributing to
+                            broader Club Liberty projects.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="leadership-item">
+
+                        <h3>
+                            Organization
+                        </h3>
+
+                        <p>
+
+                            Develop practical skills in communication,
+                            event planning, teamwork, project management,
+                            and community outreach.
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- SERVICE IN AMERICA -->
+
+    <section class="service-section">
+
+        <div class="container">
+
+            <div class="service-grid">
+
+
+                <div>
+
+                    <div class="section-label">
+                        Serving Communities
+                    </div>
+
+                    <h2>
+                        Start where you are.
+                    </h2>
+
+                    <p>
+
+                        Our chapters should make a visible difference in the
+                        communities around them.
+
+                        <br><br>
+
+                        Service projects may vary from chapter to chapter,
+                        but the principle remains the same: leadership
+                        carries a responsibility to help people.
+
+                    </p>
+
+                </div>
+
+
+                <div class="service-cards">
+
+
+                    <div class="service-card">
+
+                        <h3>
+                            Food Drives
+                        </h3>
+
+                        <p>
+                            Collecting and distributing food for individuals
+                            and families experiencing need.
+                        </p>
+
+                    </div>
+
+
+                    <div class="service-card">
+
+                        <h3>
+                            School Supplies
+                        </h3>
+
+                        <p>
+                            Helping students and families access the supplies
+                            they need to learn and succeed.
+                        </p>
+
+                    </div>
+
+
+                    <div class="service-card">
+
+                        <h3>
+                            Supporting Mothers
+                        </h3>
+
+                        <p>
+                            Collecting baby supplies and other practical
+                            resources for pregnant women, mothers, and
+                            young families.
+                        </p>
+
+                    </div>
+
+
+                    <div class="service-card">
+
+                        <h3>
+                            Speaking at Schools
+                        </h3>
+
+                        <p>
+                            Encouraging younger students to value leadership,
+                            civic responsibility, service, and opportunity.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- PRACTICE WHAT YOU DEFEND -->
+
+    <section class="conviction-section">
+
+        <div class="container">
+
+            <div class="conviction-grid">
+
+
+                <div>
+
+                    <div class="section-label">
+                        Conviction In Action
+                    </div>
+
+                    <h2>
+                        Practice what you defend.
+                    </h2>
+
+                    <p>
+
+                        Club Liberty believes ideas come with responsibilities.
+
+                        <br><br>
+
+                        It is not enough to advocate for a principle and then
+                        ignore the people affected by it. Conviction should
+                        produce service, responsibility, and compassion.
+
+                    </p>
+
+                </div>
+
+
+                <div class="conviction-quote">
+
+                    <strong>
+                        If we defend life, we should help support life.
+                    </strong>
+
+                    <p>
+
+                        For example, a pro-life conviction should not end with
+                        a political position on abortion. It should also mean
+                        supporting pregnant women, helping mothers, caring for
+                        children, and strengthening families.
+
+                        <br><br>
+
+                        The same principle applies across our work:
+                        belief should be followed by action.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- HUMANITARIAN -->
+
+    <section class="humanitarian-section">
+
+        <div class="container">
+
+            <div class="humanitarian-grid">
+
+
+                <div>
+
+                    <div class="section-label">
+                        Humanitarian Work
+                    </div>
+
+                    <h2>
+                        Service beyond borders.
+                    </h2>
+
+                    <div class="humanitarian-copy">
+
+                        <p>
+
+                            Club Liberty's long-term vision extends beyond
+                            university campuses and beyond the United States.
+
+                            <br><br>
+
+                            We seek to serve children and families in
+                            communities facing poverty and limited access to
+                            basic resources, including communities throughout
+                            Latin America.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="humanitarian-list">
+
+
+                    <div class="humanitarian-item">
+
+                        <h3>
+                            Food Assistance
+                        </h3>
+
+                        <p>
+                            Supporting children and families through food
+                            distribution and future food-shelter initiatives.
+                        </p>
+
+                    </div>
+
+
+                    <div class="humanitarian-item">
+
+                        <h3>
+                            Children's Events
+                        </h3>
+
+                        <p>
+                            Creating events with games, activities, meals,
+                            toys, and opportunities for children to experience
+                            joy, dignity, and community.
+                        </p>
+
+                    </div>
+
+
+                    <div class="humanitarian-item">
+
+                        <h3>
+                            Education & Schools
+                        </h3>
+
+                        <p>
+                            Supporting educational needs through school
+                            supplies, community partnerships, and future
+                            educational projects.
+                        </p>
+
+                    </div>
+
+
+                    <div class="humanitarian-item">
+
+                        <h3>
+                            Housing & Community Projects
+                        </h3>
+
+                        <p>
+                            Working toward projects that improve living
+                            conditions and strengthen communities over the
+                            long term.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FAITH -->
+
+    <section>
+
+        <div class="container">
+
+            <div class="faith-grid">
+
+
+                <div>
+
+                    <div class="section-label">
+                        Faith In Action
+                    </div>
+
+                    <h2>
+                        Serve in a way that reflects Christ.
+                    </h2>
+
+                </div>
+
+
+                <div>
+
+                    <p>
+
+                        Club Liberty's Christian faith shapes why and how
+                        we serve.
+
+                        <br><br>
+
+                        Not every Club Liberty event is a preaching event,
+                        and service is never valuable only when someone
+                        shares our beliefs.
+
+                        <br><br>
+
+                        But we are not ashamed of our faith. Some projects
+                        may create opportunities to share the Gospel of
+                        Jesus Christ, and every project should reflect the
+                        compassion, dignity, generosity, courage, and love
+                        we see in His example.
+
+                    </p>
+
+
+                    <div class="faith-callout"
+                         style="margin-top: 30px;">
+
+                        <strong>
+                            Is this Christlike?
+                        </strong>
+
+                        <p>
+
+                            That question remains one of the standards by
+                            which we seek to evaluate our leadership,
+                            conduct, and service.
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- INDEPENDENT CIVIC ENGAGEMENT -->
+
+    <section class="independent-section">
+
+        <div class="container">
+
+            <div class="independent-grid">
+
+
+                <div>
+
+                    <div class="section-label">
+                        Independent Civic Engagement
+                    </div>
+
+                    <h2>
+                        Principles before parties.
+                    </h2>
+
+                </div>
+
+
+                <div>
+
+                    <div class="independent-copy">
+
+                        Club Liberty is independent of political parties
+                        and does not endorse or campaign for candidates.
+
+                        <br><br>
+
+                        We encourage members to develop their own convictions,
+                        participate responsibly in civic life, and engage
+                        seriously with the issues affecting their communities.
+
+                    </div>
+
+
+                    <div class="independent-callout"
+                         style="margin-top: 30px;">
+
+                        <strong>
+                            Engage without becoming beholden.
+                        </strong>
+
+                        <p>
+
+                            Our goal is to develop principled citizens and
+                            leaders — not to become an extension of a
+                            political party or campaign.
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- CTA -->
+
+    <section class="cta">
+
+        <div class="container">
+
+            <div class="section-label">
+                Get Involved
+            </div>
+
+            <h2>
+                Learn something.
+                Lead something.
+                Serve someone.
+            </h2>
+
+            <p>
+
+                Join an existing chapter, help build a project,
+                or bring Club Liberty to your own university.
+
+            </p>
+
+            <a href="index.html#get-involved" class="button">
+                Get Involved
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+                CLUB LIBERTY
+            </div>
+
+            <div class="footer-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="https://www.instagram.com/club.liberty/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Instagram
+                </a>
+
+                <a href="mailto:info@clubliberty.org">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 Club Liberty. All rights reserved.
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
